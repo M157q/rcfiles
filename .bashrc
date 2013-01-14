@@ -207,6 +207,25 @@ update_info () {
 #==============================================================================
 #My aliaes
 
+alias ta='tmux attach'
+alias g='grep'
+alias v='vim'
+alias vd='vimdiff'
+alias s='ssh'
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+# git aliases
+alias gs='git status '
+alias ga='git add '
+alias gc='git commit'
+alias gd='git diff'
+alias go='git checkout '
+alias gl='git log '
+
 # google in shell
 function google () {
     tmp=`echo -n $@`
