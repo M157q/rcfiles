@@ -2,8 +2,7 @@
 
 # Fix permission and owner/group
 
-HOME="/usr/home/gh40402/" #set path to home folder
-DIRS=`echo $HOME`
+DIRS=`echo pwd`
 USER="gh40402"
 GROUP="gh40402" # set to the right group name
 
