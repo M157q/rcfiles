@@ -225,6 +225,8 @@ alias gc='git commit'
 alias gd='git diff'
 alias go='git checkout '
 alias gl='git log '
+alias gp='git push '
+alias gP='git pull '
 
 # google in shell
 function google () {
