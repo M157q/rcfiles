@@ -196,6 +196,7 @@ alias telnet="/usr/bin/luit -encoding big5 /usr/bin/telnet"
 
 #some lazy aliases
 alias ta='tmux attach'
+alias sr='screen -rd'
 alias g='grep'
 alias v='vim'
 alias vd='vimdiff'
