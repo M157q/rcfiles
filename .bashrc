@@ -54,20 +54,6 @@ if [ -x /usr/bin/dircolors ]; then
     alias egrep='egrep --color=auto'
 fi
 
-# some more ls aliases
-alias ll='ls -AlF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias rscp='rsync -avPe ssh'
-alias telnet="/usr/bin/luit -encoding big5 /usr/bin/telnet"
-
-alias WTF='man'
-alias bye='exit'
-alias cd..='cd ..'
-alias vd='vimdiff'
-
-
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -133,22 +119,15 @@ COLOR_L_WHITE='\[\e[1;37m\]'
 
 
 # my bash prompt
-PS1='┌─'$COLOR_L_RED'[ \d-\t ]'$COLOR_END             # date
-PS1+=$COLOR_L_YELLOW' \u '$COLOR_END                     # user
+PS1='┌─'$COLOR_L_RED'[ \d-\t ]'$COLOR_END              # date
+PS1+=$COLOR_L_YELLOW' \u '$COLOR_END                   # user
 PS1+=$COLOR_L_BLACK'@'$COLOR_END                       # @
 PS1+=$COLOR_L_GREEN' \h '$COLOR_END                    # host
 PS1+=$COLOR_L_PURPLE'$(git_branch)'$COLOR_END          # git branch
 PS1+='\n'                                              # new line
 PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
-PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END  # distrobution name
+PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
 PS1+='$(update_info)'                                  # update some info.
-
-
-
-## df check every day!
-#perl $HOME/dfCheckEveryday.pl
-#cal -3
-#fortune
 
 # let me google that for you
 google () {
@@ -207,6 +186,15 @@ update_info () {
 #==============================================================================
 #My aliaes
 
+# some more ls aliases
+alias ll='ls -AlF'
+alias la='ls -A'
+alias l='ls -CF'
+
+alias rscp='rsync -avPe ssh'
+alias telnet="/usr/bin/luit -encoding big5 /usr/bin/telnet"
+
+#some lazy aliases
 alias ta='tmux attach'
 alias g='grep'
 alias v='vim'
