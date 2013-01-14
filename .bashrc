@@ -201,6 +201,7 @@ alias g='grep'
 alias v='vim'
 alias vd='vimdiff'
 alias s='ssh'
+alias sc='screen'
 
 alias ..='cd ..'
 alias ...='cd ../..'
