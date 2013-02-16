@@ -202,6 +202,7 @@ alias v='vim'
 alias vd='vimdiff'
 alias s='ssh'
 alias sc='screen'
+alias a='alsamixer'
 
 alias ..='cd ..'
 alias ...='cd ../..'
