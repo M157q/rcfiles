@@ -136,13 +136,6 @@ google () {
 }
 
 
-# an fake autojump
-# https://github.com/joelthelion/autojump
-j () {
-    cat $HOME/.pwd | sort | uniq | grep -i $@
-}
-
-
 # display current git branch on the prompt
 git_branch () {
     if [ -d ".git" ] ; then
@@ -154,33 +147,6 @@ git_branch () {
 # show distrobution name
 distro_name () {
     cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
-}
-
-
-# append pwd to ~/.pwd
-adddir () {
-    last=`tail -n 1 $HOME/.pwd`
-    if [ ! -e $HOME/.pwd ] ; then
-        touch $HOME/.pwd
-        echo `pwd` >> $HOME/.pwd
-    fi
-
-    if [ $last != `pwd` ] ; then
-        echo `pwd` >> $HOME/.pwd
-    fi
-    ret=""
-}
-
-
-# where I've been there
-cded () {
-    tail $HOME/.pwd
-}
-
-
-# update infomations
-update_info () {
-    adddir
 }
 
 #==============================================================================
