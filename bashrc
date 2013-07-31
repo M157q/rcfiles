@@ -127,7 +127,6 @@ PS1+=$COLOR_L_PURPLE'$(git_branch)'$COLOR_END          # git branch
 PS1+='\n'                                              # new line
 PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
 PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
-PS1+='$(update_info)'                                  # update some info.
 
 # let me google that for you
 google () {
@@ -151,6 +150,8 @@ distro_name () {
 
 #==============================================================================
 #My aliaes
+# rm protect
+alias rm='rm -i'
 
 # some more ls aliases
 alias ll='ls -AlF'
@@ -169,6 +170,7 @@ alias vd='vimdiff'
 alias s='ssh'
 alias sc='screen'
 alias a='alsamixer'
+alias e='emacs -nw'
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -203,7 +205,26 @@ function dict(){
 alias plurk='w3m http://www.plurk.com/m';
 
 #nmap
-#alias nmap='sudo nmap'
 alias nmapo='sudo nmap -sS -P0 -sV -O -A'
 alias nmapp='sudo nmap -sS -P0 -p1-65535 -sV -O'
 alias nmapa='sudo nmap -A -T4'
+
+#perl cpan
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/m157q/perl5";             
+export PERL_MB_OPT="--install_base /home/m157q/perl5";                           
+export PERL_MM_OPT="INSTALL_BASE=/home/m157q/perl5";                             
+export PERL5LIB="/home/m157q/perl5/lib/perl5:$PERL5LIB";                         
+export PATH="/home/m157q/perl5/bin:$PATH";
+
+#ruby bundler
+export PATH="/home/m157q/.gem/ruby/2.0.0/bin:$PATH";
+
+#===============================================
+#machines
+alias reg='ssh gh40402@140.113.200.181 -p 12345'
+alias nbab1='mosh gh40402@140.113.54.52'
+alias oh='mosh m157q@140.113.101.10'
+alias duty-q='mosh m157q@140.113.27.34'
+alias mail-q='mosh m157q@140.113.27.35'
+alias home-q='mosh m157q@140.113.27.37'
+alias www-q='mosh m157q@140.113.27.41'

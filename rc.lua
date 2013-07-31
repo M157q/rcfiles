@@ -44,7 +44,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, and wallpapers
-beautiful.init("/home/gh40402/.config/awesome/themes/default/theme.lua")
+beautiful.init("/home/m157q/.config/awesome/themes/default/theme.lua")
 
 -- default terminal and editor
 terminal = "urxvt"
@@ -77,7 +77,7 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
--- beautiful.wallpaper = "/home/xatierlike/Pictures/goodbye.jpg"
+ beautiful.wallpaper = "/win_D/desktop/桌布/the_garden_of_sinners.jpg"
 if beautiful.wallpaper then
     for s = 1, screen.count() do
         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
@@ -146,8 +146,8 @@ end
  -- network usage
  netwidget = wibox.widget.textbox()
  vicious.register(netwidget, vicious.widgets.net,
-                 '<span color="#CC9090">⇩${wlan0 down_kb}</span>' ..
-                 '<span color="#7F9F7F">⇧${wlan0 up_kb}</span>', 3)
+                 '<span color="#CC9090">⇩${wlp3s0 down_kb}</span>' ..
+                 '<span color="#7F9F7F">⇧${wlp3s0 up_kb}</span>', 3)
  
  -- clock
  clockwidget = awful.widget.textclock(" %a %b %d %H:%M:%S ", 1)
