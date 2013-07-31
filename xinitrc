@@ -1,18 +1,19 @@
-export XIM=hime
-export XIM_PROGRAM=/usr/bin/hime
+export XIM=gcin
+export XIM_PROGRAM=/usr/bin/gcin
 export XIM_ARGS=
-export XMODIFIERS="@im=hime"
-export GTK_IM_MODULE=hime
-export QT_IM_MODULE=hime
-export QT4_IM_MODULE=hime
+export XMODIFIERS=@im=gcin
+export GTK_IM_MODULE=gcin
+export QT_IM_MODULE=gcin
+export QT4_IM_MODULE=gcin
 
 xmodmap ~/.Xmodmap
 xrdb ~/.Xresources
 uxrvtd -q -o -f
 
 
+batterymon &
 guake &
-hime &
+gcin &
 xcompmgr &
 chromium &
 pcmanx &

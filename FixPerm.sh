@@ -4,8 +4,8 @@
 
 HOME=`pwd`
 DIRS=`echo $HOME`
-USER="gh40402"
-GROUP="gh40402" # set to the right group name
+USER=`whoami`
+GROUP='users' # set to the right group name
 
 chown -R $USER:$GROUP $DIRS
 find $DIRS -type d -exec chmod 700 {} \; # set the folder default permission
