@@ -219,16 +219,3 @@ export PATH="/home/m157q/perl5/bin:$PATH";
 
 #ruby bundler
 export PATH="/home/m157q/.gem/ruby/2.0.0/bin:$PATH";
-<<<<<<< HEAD
-
-#===============================================
-#machines
-alias reg='ssh gh40402@140.113.200.181 -p 12345'
-alias nbab1='mosh gh40402@140.113.54.52'
-alias oh='mosh m157q@140.113.101.10'
-alias duty-q='mosh m157q@140.113.27.34'
-alias mail-q='mosh m157q@140.113.27.35'
-alias home-q='mosh m157q@140.113.27.37'
-alias www-q='mosh m157q@140.113.27.41'
-=======
->>>>>>> 6d58f0fd74c618a45b633109f46046ecc13ca34f
