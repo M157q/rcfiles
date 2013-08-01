@@ -126,7 +126,12 @@ PS1+=$COLOR_L_GREEN' \h '$COLOR_END                    # host
 PS1+=$COLOR_L_PURPLE'$(git_branch)'$COLOR_END          # git branch
 PS1+='\n'                                              # new line
 PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
+<<<<<<< HEAD
 PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
+=======
+#PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
+PS1+='-'$COLOR_L_WHITE'\$ '$COLOR_END # distrobution name
+>>>>>>> 6d58f0fd74c618a45b633109f46046ecc13ca34f
 
 # let me google that for you
 google () {
@@ -144,9 +149,9 @@ git_branch () {
 
 
 # show distrobution name
-distro_name () {
-    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
-}
+#distro_name () {
+#    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
+#}
 
 #==============================================================================
 #My aliaes
@@ -218,6 +223,7 @@ export PATH="/home/m157q/perl5/bin:$PATH";
 
 #ruby bundler
 export PATH="/home/m157q/.gem/ruby/2.0.0/bin:$PATH";
+<<<<<<< HEAD
 
 #===============================================
 #machines
@@ -228,3 +234,5 @@ alias duty-q='mosh m157q@140.113.27.34'
 alias mail-q='mosh m157q@140.113.27.35'
 alias home-q='mosh m157q@140.113.27.37'
 alias www-q='mosh m157q@140.113.27.41'
+=======
+>>>>>>> 6d58f0fd74c618a45b633109f46046ecc13ca34f
