@@ -126,7 +126,8 @@ PS1+=$COLOR_L_GREEN' \h '$COLOR_END                    # host
 PS1+=$COLOR_L_PURPLE'$(git_branch)'$COLOR_END          # git branch
 PS1+='\n'                                              # new line
 PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
-PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
+#PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
+PS1+='-'$COLOR_L_WHITE'\$ '$COLOR_END # distrobution name
 
 # let me google that for you
 google () {
@@ -144,9 +145,9 @@ git_branch () {
 
 
 # show distrobution name
-distro_name () {
-    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
-}
+#distro_name () {
+#    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
+#}
 
 #==============================================================================
 #My aliaes
