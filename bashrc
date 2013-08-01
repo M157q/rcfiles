@@ -126,12 +126,8 @@ PS1+=$COLOR_L_GREEN' \h '$COLOR_END                    # host
 PS1+=$COLOR_L_PURPLE'$(git_branch)'$COLOR_END          # git branch
 PS1+='\n'                                              # new line
 PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
-<<<<<<< HEAD
-PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
-=======
 #PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
 PS1+='-'$COLOR_L_WHITE'\$ '$COLOR_END # distrobution name
->>>>>>> 6d58f0fd74c618a45b633109f46046ecc13ca34f
 
 # let me google that for you
 google () {
