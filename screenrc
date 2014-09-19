@@ -1,0 +1,30 @@
+# 關閉啟動訊息。
+startup_message off
+
+# 加入狀態列。
+caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
+hardstatus alwaysignore
+hardstatus alwayslastline "%{= .R} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+
+# 將預設編碼設為 UTF-8。
+defutf8 on
+
+#解決cjk寬度問題
+#cjkwidth on
+
+# 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind b encoding big5 utf8 # convert big5 to utf8
+# C-a u 後切回可以直看 utf-8 編碼的文字，不用再切換 pietty 的字元編碼設定
+bind u encoding utf8 utf8
+
+# 設定視窗回捲時可看到的行數
+defscrollback 2048
+
+# using Ctrl+Left & Ctrl+Right 
+bindkey ^[[1;5D prev
+bindkey ^[[1;5C next
+bindkey \033[D prev
+bindkey \033[C next
+
+# use Ctrl+a shift+R to reload screenrc                                            
+bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
