@@ -191,6 +191,8 @@ alias go='git checkout '
 alias gl='git log '
 alias gp='git push '
 alias gP='git pull '
+alias gb='git branch '
+alias gr='git reset '
 
 # google in shell
 function google () {
