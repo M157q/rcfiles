@@ -167,7 +167,7 @@ alias rscp='rsync -avPe ssh'
 alias telnet="/usr/bin/luit -encoding big5 /usr/bin/telnet"
 
 #some lazy aliases
-alias ta='tmux attach'
+alias ta='tmux attach -d'
 alias sr='screen -rd'
 alias g='grep'
 alias v='vim'
