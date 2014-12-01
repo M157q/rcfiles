@@ -160,7 +160,6 @@ alias la='ls -A'
 alias l='ls -CF'
 
 alias rscp='rsync -avPe ssh'
-alias telnet="/usr/bin/luit -encoding big5 /usr/bin/telnet"
 
 #some lazy aliases
 alias ta='tmux attach'
@@ -181,12 +180,13 @@ alias .....='cd ../../../..'
 # git aliases
 alias gs='git status '
 alias ga='git add '
-alias gc='git commit'
-alias gd='git diff'
+alias gc='git commit '
+alias gd='git diff '
 alias go='git checkout '
 alias gl='git log '
 alias gp='git push '
 alias gP='git pull '
+alias gb='git branch '
 
 # google in shell
 function google () {
