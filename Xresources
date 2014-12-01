@@ -51,4 +51,9 @@ URxvt*urlLauncher:      /usr/bin/chromium
 
 ! }}}
 
+! xscreensaver log settings {{{
+xscreensaver.logFile:/var/log/xscreensaver.log
+xscreensaver.verbose:true
+! }}}
+
 ! vim:set fdm=marker:

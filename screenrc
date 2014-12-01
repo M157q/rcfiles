@@ -10,7 +10,7 @@ hardstatus alwayslastline "%{= .R} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%
 defutf8 on
 
 #解決cjk寬度問題
-cjkwidth on
+#cjkwidth on
 
 # 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
 bind b encoding big5 utf8 # convert big5 to utf8

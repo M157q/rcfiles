@@ -77,7 +77,7 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
- beautiful.wallpaper = "/win_D/desktop/桌布/the_garden_of_sinners.jpg"
+--  beautiful.wallpaper = ""
 if beautiful.wallpaper then
     for s = 1, screen.count() do
         gears.wallpaper.maximized(beautiful.wallpaper, s, true)

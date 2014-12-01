@@ -162,7 +162,7 @@ alias l='ls -CF'
 alias rscp='rsync -avPe ssh'
 
 #some lazy aliases
-alias ta='tmux attach'
+alias ta='tmux attach -d'
 alias sr='screen -rd'
 alias g='grep'
 alias v='vim'
@@ -187,6 +187,7 @@ alias gl='git log '
 alias gp='git push '
 alias gP='git pull '
 alias gb='git branch '
+alias gr='git reset '
 
 # google in shell
 function google () {
@@ -219,3 +220,6 @@ export PATH="/home/m157q/perl5/bin:$PATH";
 
 #ruby bundler
 export PATH="/home/m157q/.gem/ruby/2.0.0/bin:$PATH";
+
+#swap ctrl and capslock
+#`sudo loadkeys Caps2Ctrl.map`
