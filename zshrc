@@ -1,5 +1,5 @@
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/gh40402/.zshrc'
+zstyle :compinstall filename '/home/m157q/.zshrc'
 
 #To enable autocompletion
 autoload -Uz compinit 
