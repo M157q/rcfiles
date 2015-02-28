@@ -36,8 +36,8 @@
  Plugin 'pythoncomplete'
  Plugin 'ctags.vim'
  Plugin 'phpcomplete.vim'
- "Plugin 'c.vim'
  Plugin 'cppcomplete'
+ Plugin 'c.vim'
 
  call vundle#end()             " required!
  filetype plugin indent on     " required!
