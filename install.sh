@@ -13,6 +13,6 @@ git clone git://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 
 # Install Vundle
-#git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
+#git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 #ln -sf ~/rcfiles/vimrc ~/.vimrc
-#vim +BundleInstall +qall
+#vim +PluginInstall +qall

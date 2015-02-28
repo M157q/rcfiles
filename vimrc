@@ -1,3 +1,58 @@
+"============== Vundle ===============
+ set nocompatible               " be iMproved
+ filetype off                   " required!
+
+ " set the runtime path to include Vundle and initialize
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+
+ " let Vundle manage Vundle
+ " required! 
+ Plugin 'gmarik/Vundle.vim'
+
+ " My Plugins here:
+ "
+ " original repos on github
+ "Plugin 'tpope/vim-fugitive'
+ Plugin 'Lokaltog/vim-easymotion'
+ "Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+ "Plugin 'tpope/vim-rails.git'
+ Plugin 'scrooloose/nerdtree'
+ "Plugin 'shawncplus/phpcomplete'   //broken
+ Plugin 'xaizek/vim-inccomplete'
+ 
+ " non github repos
+ "Plugin 'git://git.wincent.com/command-t.git'
+
+
+ " vim-scripts repos
+ Plugin 'L9'
+ Plugin 'FuzzyFinder'
+ Plugin 'snipMate'
+ Plugin 'AutoComplPop'
+ Plugin 'fakeclip' 
+ Plugin 'OmniCppComplete'
+ Plugin 'matchit.zip'
+ Plugin 'pythoncomplete'
+ Plugin 'ctags.vim'
+ Plugin 'phpcomplete.vim'
+ "Plugin 'c.vim'
+ Plugin 'cppcomplete'
+
+ call vundle#end()             " required!
+ filetype plugin indent on     " required!
+ "
+ " Brief help
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Plugin command are not allowed..
+"============================================================================
+
+
 " All system-wide defaults are set in $VIMRUNTIME/debian.vim (usually just
 " /usr/share/vim/vimcurrent/debian.vim) and sourced by the call to :runtime
 " you can find below.  If you wish to change any of those settings, you should
@@ -172,55 +227,3 @@ nnoremap ff  :FufFile
 nnoremap fb  :FufBuffer
 
 cmap w!! w !sudo tee %
-
-"============== Vundle ===============
- set nocompatible               " be iMproved
- filetype on                   " required!
-
- set rtp+=~/.vim/bundle/vundle/
- call vundle#rc()
-
- " let Vundle manage Vundle
- " required! 
- Bundle 'gmarik/vundle'
-
- " My Bundles here:
- "
- " original repos on github
- "Bundle 'tpope/vim-fugitive'
- Bundle 'Lokaltog/vim-easymotion'
- "Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- "Bundle 'tpope/vim-rails.git'
- Bundle 'scrooloose/nerdtree'
- "Bundle 'shawncplus/phpcomplete'   //broken
- Bundle 'xaizek/vim-inccomplete'
-
- " vim-scripts repos
- Bundle 'L9'
- Bundle 'FuzzyFinder'
- Bundle 'snipMate'
- Bundle 'AutoComplPop'
- Bundle 'fakeclip' 
- Bundle 'OmniCppComplete'
- Bundle 'matchit.zip'
- Bundle 'pythoncomplete'
- Bundle 'ctags.vim'
- Bundle 'phpcomplete.vim'
-" Bundle 'c.vim'
- Bundle 'cppcomplete'
- " non github repos
- "Bundle 'git://git.wincent.com/command-t.git'
-
-
- filetype plugin indent on     " required!
- "
- " Brief help
- " :BundleList          - list configured bundles
- " :BundleInstall(!)    - install(update) bundles
- " :BundleSearch(!) foo - search(or refresh cache first) for foo
- " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
-"============================================================================
-"
