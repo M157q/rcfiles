@@ -56,6 +56,9 @@ alias go='git checkout '
 alias gl='git log '
 alias gp='git push '
 alias gP='git pull '
+alias gb='git branch '
+alias gr='git reset '
+alias gm='git merge '
 
 # locale
 export LANG=zh_TW.UTF-8

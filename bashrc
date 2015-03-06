@@ -178,17 +178,17 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # git aliases
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gd='git diff'
-alias go='git checkout'
-alias gl='git log'
-alias gp='git push'
-alias gP='git pull'
-alias gb='git branch'
-alias gr='git reset'
-alias gm='git merge'
+alias gs='git status '
+alias ga='git add '
+alias gc='git commit '
+alias gd='git diff '
+alias go='git checkout '
+alias gl='git log '
+alias gp='git push '
+alias gP='git pull '
+alias gb='git branch '
+alias gr='git reset '
+alias gm='git merge '
 
 # google in shell
 function google () {
