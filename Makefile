@@ -1,21 +1,22 @@
 install:
-	ln -sf ~/rcfiles/screenrc ~/.screenrc
-	ln -sf ~/rcfiles/bashrc ~/.bashrc
-	ln -sf ~/rcfiles/zshrc ~/.zshrc
-	ln -sf ~/rcfiles/tmux.conf ~/.tmux.conf
-	git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
-	ln -sf ~/rcfiles/vimrc ~/.vimrc
+	ln -sf $(HOME)/rcfiles/screenrc $(HOME)/.screenrc
+	ln -sf $(HOME)/rcfiles/bashrc $(HOME)/.bashrc
+	ln -sf $(HOME)/rcfiles/tcshrc $(HOME)/.tcshrc
+	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
+	ln -sf $(HOME)/rcfiles/tmux.conf $(HOME)/.tmux.conf
+	git clone https://github.com/gmarik/Vundle.vim $(HOME)/.vim/bundle/Vundle.vim
+	ln -sf $(HOME)/rcfiles/vimrc $(HOME)/.vimrc
 	vim +BundleInstall +qall
-	#git clone git://github.com/amix/vimrc.git ~/.vim_runtime
-	#sh ~/.vim_runtime/install_awesome_vimrc.sh
+	#git clone git://github.com/amix/vimrc.git $(HOME)/.vim_runtime
+	#sh $(HOME)/.vim_runtime/install_awesome_vimrc.sh
 
 clean:
-	rm ~/.screenrc
-	rm ~/.bashrc
-	rm ~/.zshrc
-	rm ~/.vimrc
-	rm ~/.tmux.conf
-	rm -rf ~/.vim
-	#rm -rf ~/.vim_runtime
+	rm $(HOME)/.screenrc
+	rm $(HOME)/.bashrc
+	rm $(HOME)/.zshrc
+	rm $(HOME)/.vimrc
+	rm $(HOME)/.tmux.conf
+	rm -rf $(HOME)/.vim
+	#rm -rf $(HOME)/.vim_runtime
 
 
