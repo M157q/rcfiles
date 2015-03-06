@@ -188,6 +188,7 @@ alias gp='git push'
 alias gP='git pull'
 alias gb='git branch'
 alias gr='git reset'
+alias gm='git merge'
 
 # google in shell
 function google () {
