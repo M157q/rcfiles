@@ -14,6 +14,9 @@ install:
 	ln -sf $(rcfiles)/zshrc $(HOME)/.zshrc
 	# oh-my-fish
 	git clone $(oh_my_fish) $(HOME)/.oh-my-fish
+	if [ ! -d $(oh_my_fish_config_dir) ]; then \
+		mkdir -p $(oh_my_fish_config_dir); \
+	fi;
 	ln -sf $(rcfiles)/fishrc $(oh_my_fish_config_dir)/config.fish
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
