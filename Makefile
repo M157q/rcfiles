@@ -2,7 +2,6 @@ install:
 	ln -sf $(HOME)/rcfiles/screenrc $(HOME)/.screenrc
 	ln -sf $(HOME)/rcfiles/bashrc $(HOME)/.bashrc
 	ln -sf $(HOME)/rcfiles/tcshrc $(HOME)/.tcshrc
-	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
 	ln -sf $(HOME)/rcfiles/tmux.conf $(HOME)/.tmux.conf
 	# oh-my-zsh
 	git clone https://github.com/robbyrussell/oh-my-zsh.git $(HOME)/.oh-my-zsh
