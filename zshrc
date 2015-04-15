@@ -49,7 +49,7 @@ COMPLETION_WAITING_DOTS="true"
 kernel=`uname`
 if [ $kernel = 'Darwin' ]; then
     plugins=(osx brew screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
-elif [ $kernel = 'Linux']; then
+elif [ $kernel = 'Linux' ]; then
     plugins=(archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
 else
     plugins=(screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
