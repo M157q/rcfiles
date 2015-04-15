@@ -45,7 +45,15 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
+
+kernel=`uname`
+if [ $kernel = 'Darwin' ]; then
+    plugins=(osx brew screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
+elif [ $kernel = 'Linux']; then
+    plugins=(archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
+else
+    plugins=(screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
+fi
 
 # User configuration
 
