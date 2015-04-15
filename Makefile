@@ -4,11 +4,16 @@ install:
 	ln -sf $(HOME)/rcfiles/tcshrc $(HOME)/.tcshrc
 	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
 	ln -sf $(HOME)/rcfiles/tmux.conf $(HOME)/.tmux.conf
+	# oh-my-zsh
+	git clone git://github.com/robbyrussell/oh-my-zsh.git $(HOME)/.oh-my-zsh
+	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
+	# oh-my-fish
+	git clone git://github.com/bpinto/oh-my-fish.git $(HOME)/.oh-my-fish
+	ln -sf $(HOME)/rcfiles/fishrc $(HOME)/.config/fish/config.fish
+	# vim plugins
 	git clone https://github.com/gmarik/Vundle.vim $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(HOME)/rcfiles/vimrc $(HOME)/.vimrc
 	vim +BundleInstall +qall
-	#git clone git://github.com/amix/vimrc.git $(HOME)/.vim_runtime
-	#sh $(HOME)/.vim_runtime/install_awesome_vimrc.sh
 
 clean:
 	rm $(HOME)/.screenrc
@@ -16,7 +21,8 @@ clean:
 	rm $(HOME)/.zshrc
 	rm $(HOME)/.vimrc
 	rm $(HOME)/.tmux.conf
+	rm -rf $(HOME)/.oh-my-zsh
+	rm -rf $(HOME)/.oh-my-fish
 	rm -rf $(HOME)/.vim
-	#rm -rf $(HOME)/.vim_runtime
 
 
