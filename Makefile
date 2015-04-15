@@ -7,6 +7,7 @@ vundle = 'https://github.com/gmarik/Vundle.vim'
 install:
 	ln -sf $(rcfiles)/screenrc $(HOME)/.screenrc
 	ln -sf $(rcfiles)/bashrc $(HOME)/.bashrc
+	ln -sf $(rcfiles)/bash_aliases $(HOME)/.bash_aliases
 	ln -sf $(rcfiles)/tcshrc $(HOME)/.tcshrc
 	ln -sf $(rcfiles)/tmux.conf $(HOME)/.tmux.conf
 	# oh-my-zsh
@@ -26,6 +27,7 @@ install:
 clean:
 	rm -f $(HOME)/.screenrc
 	rm -f $(HOME)/.bashrc
+	rm -f $(HOME)/.bash_aliases
 	rm -f $(HOME)/.tcshrc
 	rm -f $(HOME)/.tmux.conf
 	rm -f $(HOME)/.zshrc

@@ -129,13 +129,6 @@ PS1+='└─'$COLOR_L_CYAN'[\w]'$COLOR_END                 # work directory
 #PS1+='-'$COLOR_L_WHITE'[$(distro_name)] \$ '$COLOR_END # distrobution name
 PS1+='-'$COLOR_L_WHITE'\$ '$COLOR_END # distrobution name
 
-# let me google that for you
-google () {
-    local tmp=`echo -n $@`
-    w3m "www.google.com/search?hl=en&q=$tmp";
-}
-
-
 # display current git branch on the prompt
 git_branch () {
     if [ -d ".git" ] ; then
@@ -149,78 +142,15 @@ git_branch () {
 #    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
 #}
 
-#==============================================================================
-#My aliaes
-# rm protect
-alias rm='rm -i'
-
-# some more ls aliases
-alias ll='ls -AlF'
-alias la='ls -A'
-alias l='ls -CF'
-
-alias rscp='rsync -avPe ssh'
-
-#some lazy aliases
-alias ta='tmux attach -d'
-alias sr='screen -rd'
-alias g='grep'
-alias v='vim'
-alias vd='vimdiff'
-alias s='ssh'
-alias sc='screen'
-alias a='alsamixer'
-alias e='emacs -nw'
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-
-# git aliases
-alias gs='git status '
-alias ga='git add '
-alias gc='git commit '
-alias gd='git diff '
-alias go='git checkout '
-alias gl='git log '
-alias gp='git push '
-alias gP='git pull '
-alias gb='git branch '
-alias gr='git reset '
-alias gm='git merge '
-
-# google in shell
-function google () {
-    tmp=`echo -n $@`
-    w3m "www.google.com/search?hl=en&q=$tmp";
-}
-
-#export -f google
-
-#yahoo dictionary in shell
-function dict(){
-    tmp=`echo -n $@`
-    w3m "tw.dictionary.yahoo.com/dictionary?p=$tmp";
-}
-
-#plurk in shell
-alias plurk='w3m http://www.plurk.com/m';
-
-#nmap
-alias nmapo='sudo nmap -sS -P0 -sV -O -A'
-alias nmapp='sudo nmap -sS -P0 -p1-65535 -sV -O'
-alias nmapa='sudo nmap -A -T4'
-
 #perl cpan
-export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:/home/m157q/perl5";             
-export PERL_MB_OPT="--install_base /home/m157q/perl5";                           
-export PERL_MM_OPT="INSTALL_BASE=/home/m157q/perl5";                             
-export PERL5LIB="/home/m157q/perl5/lib/perl5:$PERL5LIB";                         
-export PATH="/home/m157q/perl5/bin:$PATH";
+export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:$HOME/perl5";             
+export PERL_MB_OPT="--install_base $HOME/perl5";                           
+export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5";                             
+export PERL5LIB="$HOME/perl5/lib/perl5:$PERL5LIB";                         
+export PATH="$HOME/perl5/bin:$PATH";
 
 #ruby bundler
-export PATH="/home/m157q/.gem/ruby/2.0.0/bin:$PATH";
+export PATH="$HOME/.gem/ruby/2.0.0/bin:$PATH";
 
 #swap ctrl and capslock
 #`sudo loadkeys Caps2Ctrl.map`
