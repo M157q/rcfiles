@@ -5,10 +5,10 @@ install:
 	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
 	ln -sf $(HOME)/rcfiles/tmux.conf $(HOME)/.tmux.conf
 	# oh-my-zsh
-	git clone git://github.com/robbyrussell/oh-my-zsh.git $(HOME)/.oh-my-zsh
+	git clone https://github.com/robbyrussell/oh-my-zsh.git $(HOME)/.oh-my-zsh
 	ln -sf $(HOME)/rcfiles/zshrc $(HOME)/.zshrc
 	# oh-my-fish
-	git clone git://github.com/bpinto/oh-my-fish.git $(HOME)/.oh-my-fish
+	git clone https://github.com/bpinto/oh-my-fish.git $(HOME)/.oh-my-fish
 	ln -sf $(HOME)/rcfiles/fishrc $(HOME)/.config/fish/config.fish
 	# vim plugins
 	git clone https://github.com/gmarik/Vundle.vim $(HOME)/.vim/bundle/Vundle.vim
