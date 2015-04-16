@@ -46,7 +46,7 @@ COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-kernel=`uname`
+kernel=`uname -s`
 if [ $kernel = 'Darwin' ]; then
     plugins=(osx brew screen git github gnu-utils mosh nmap npm pip python tmux virtualenv)
 elif [ $kernel = 'Linux' ]; then
