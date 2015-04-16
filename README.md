@@ -1,8 +1,8 @@
-#rcfiles
-Just bunch of my rcfiles
+# rcfiles
+Just a bunch of my dotfiles.
 
 ## Usage
-Make sure have installed git.
+Make sure you have git installed and the network connection is fine.
 
 ### Install
 1. `git clone https://github.com/M157q/rcfiles.git ~`
@@ -12,8 +12,7 @@ Make sure have installed git.
 ### Update
 1. `cd ~/rcfiles`
 2. `git pull`
-3. `make clean`
-4. `make install`
+3. `make update`
 
 ### Uninstall
 1. `cd ~/rcfiles`

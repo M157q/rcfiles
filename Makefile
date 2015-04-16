@@ -37,4 +37,6 @@ clean:
 	rm -f $(HOME)/.vimrc
 	rm -rf $(HOME)/.vim
 
+update: clean install
+
 
