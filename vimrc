@@ -186,7 +186,6 @@ set shiftwidth=4
 " 尋找時，符合字串會反白表示
 set hlsearch
 set matchpairs+=<:>
-set paste
 
 " 換行分割線 (?)
 set colorcolumn=80
