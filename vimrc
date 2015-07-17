@@ -20,6 +20,9 @@ colo slate
 
 cmap w!! w !sudo tee %
 
+" auto remove trailing spaces when saving the file.
+autocmd BufWritePre * :%s/\s\+$//e
+
 
 "============== Vundle ===============
  set nocompatible               " be iMproved
