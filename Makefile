@@ -5,20 +5,34 @@ oh_my_fish_config_dir = '$(HOME)/.config/fish'
 vundle = 'https://github.com/gmarik/Vundle.vim'
 
 install:
+	# For Linux X Window
+	kernel='$(shell uname -s)'
+	if [ $(kernel) == 'Linux' ]; then \
+		ln -sf $(rcfiles)/xinitrc $(HOME)/.xinitrc; \
+		ln -sf $(rcfiles)/Xresources $(HOME)/.Xresources; \
+		ln -sf $(rcfiles)/Xmodmap $(HOME)/.Xmodmap; \
+		ln -sf $(rcfiles)/fonts.conf $(HOME)/.fonts.conf; \
+		mkdir -p $(HOME)/.config/awesome; \
+		ln -sf $(rcfiles)/rc.lua $(HOME)/.config/awesome/rc.lua; \
+	fi;
+
 	ln -sf $(rcfiles)/screenrc $(HOME)/.screenrc
 	ln -sf $(rcfiles)/bashrc $(HOME)/.bashrc
 	ln -sf $(rcfiles)/bash_aliases $(HOME)/.bash_aliases
 	ln -sf $(rcfiles)/tcshrc $(HOME)/.tcshrc
 	ln -sf $(rcfiles)/tmux.conf $(HOME)/.tmux.conf
+
 	# oh-my-zsh
 	git clone $(oh_my_zsh) $(HOME)/.oh-my-zsh
 	ln -sf $(rcfiles)/zshrc $(HOME)/.zshrc
+
 	# oh-my-fish
 	git clone $(oh_my_fish) $(HOME)/.oh-my-fish
 	if [ ! -d $(oh_my_fish_config_dir) ]; then \
 		mkdir -p $(oh_my_fish_config_dir); \
 	fi;
 	ln -sf $(rcfiles)/fishrc $(oh_my_fish_config_dir)/config.fish
+
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(rcfiles)/vimrc $(HOME)/.vimrc
