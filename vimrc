@@ -21,7 +21,14 @@ colo slate
 cmap w!! w !sudo tee %
 
 " auto remove trailing spaces when saving the file.
-autocmd BufWritePre * :%s/\s\+$//e
+fun! StripTrailingWhitespace()
+    "Don't strip on these filetypes
+    if &ft =~ 'markdown'
+        return
+    endif
+    %s/\s\+$//e
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 
 "============== Vundle ===============
