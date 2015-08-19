@@ -145,10 +145,11 @@ end
 
  -- network usage
  netwidget = wibox.widget.textbox()
+ network_interface = 'wlp3s0b1'
  vicious.register(netwidget, vicious.widgets.net,
-                 '<span color="#CC9090">⇩${wlp3s0 down_kb}</span>' ..
-                 '<span color="#7F9F7F">⇧${wlp3s0 up_kb}</span>', 3)
- 
+                 '<span color="#CC9090">⇩${' .. network_interface .. ' down_kb}</span>' ..
+                 '<span color="#7F9F7F">⇧${' .. network_interface .. ' up_kb}</span>', 3)
+
  -- clock
  clockwidget = awful.widget.textclock(" %a %b %d %H:%M:%S ", 1)
  clockwidget_t = awful.tooltip( {
@@ -157,8 +158,8 @@ end
          return tooltip_func_text('cal -3')
      end
  })
- 
- 
+
+
  -- CPU usage
  cpuwidget = wibox.widget.textbox()
  cpuwidget_t = awful.tooltip( {
@@ -169,7 +170,7 @@ end
  })
  vicious.register(cpuwidget, vicious.widgets.cpu,
                   '<span color="#CC0000">$1% </span>[$2:$3:$4:$5]' , 2)
- 
+
  -- memory usage
  memwidget = wibox.widget.textbox()
  memwidget_t = awful.tooltip( {
@@ -180,7 +181,7 @@ end
  })
  vicious.register(memwidget, vicious.widgets.mem,
                   '$2MB/$3MB (<span color="#00EE00">$1%</span>)', 5)
- 
+
  -- battery status
  batwidget = wibox.widget.textbox()
  batwidget_t = awful.tooltip( {
