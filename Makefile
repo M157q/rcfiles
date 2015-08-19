@@ -21,6 +21,7 @@ install:
 	ln -sf $(rcfiles)/bash_aliases $(HOME)/.bash_aliases
 	ln -sf $(rcfiles)/tcshrc $(HOME)/.tcshrc
 	ln -sf $(rcfiles)/tmux.conf $(HOME)/.tmux.conf
+	ln -sf $(rcfiles)/motd /etc/motd
 
 	# oh-my-zsh
 	git clone $(oh_my_zsh) $(HOME)/.oh-my-zsh
