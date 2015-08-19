@@ -9,7 +9,8 @@ export QT4_IM_MODULE=gcin
 xmodmap ~/.Xmodmap
 xrdb ~/.Xresources
 
-batterymon &
 xcompmgr &
+guake &
+firefox &
 
 exec awesome >> ~/.cache/awesome/awesome_stdout 2>> ~/.cache/awesome/awesome_stderr
