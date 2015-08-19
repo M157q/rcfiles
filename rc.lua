@@ -145,10 +145,13 @@ end
 
  -- network usage
  netwidget = wibox.widget.textbox()
- network_interface = 'wlp3s0b1'
+ wireless_interface = 'wlp3s0b1'
+ wired_interface = 'enp2s0'
  vicious.register(netwidget, vicious.widgets.net,
-                 '<span color="#CC9090">⇩${' .. network_interface .. ' down_kb}</span>' ..
-                 '<span color="#7F9F7F">⇧${' .. network_interface .. ' up_kb}</span>', 3)
+                 '<span color="#CC9090">⇩${' .. wireless_interface .. ' down_kb}</span>' ..
+                 '<span color="#7F9F7F">⇧${' .. wireless_interface .. ' up_kb}</span>' ..
+                 '<span color="#CC9090">⇩${' .. wired_interface .. ' down_kb}</span>' ..
+                 '<span color="#7F9F7F">⇧${' .. wired_interface .. ' up_kb}</span>', 3)
 
  -- clock
  clockwidget = awful.widget.textclock(" %a %b %d %H:%M:%S ", 1)
@@ -298,7 +301,7 @@ for s = 1, screen.count() do
     else
         right_layout:add(netwidget)
         right_layout:add(separator)
-       right_layout:add(cpuwidget)
+        right_layout:add(cpuwidget)
         right_layout:add(separator)
         right_layout:add(memwidget)
     end
