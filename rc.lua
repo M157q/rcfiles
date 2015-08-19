@@ -145,7 +145,7 @@ end
 
  -- network usage
  netwidget = wibox.widget.textbox()
- network_interface = 'wlp3s0b1'
+ network_interface = 'ens9'
  vicious.register(netwidget, vicious.widgets.net,
                  '<span color="#CC9090">⇩${' .. network_interface .. ' down_kb}</span>' ..
                  '<span color="#7F9F7F">⇧${' .. network_interface .. ' up_kb}</span>', 3)
