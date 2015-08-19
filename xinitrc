@@ -12,4 +12,4 @@ xrdb ~/.Xresources
 batterymon &
 xcompmgr &
 
-exec awesome >> ~/.cache/awesome_stdout 2>> ~/.cache/awesome_stderr
+exec awesome >> ~/.cache/awesome/awesome_stdout 2>> ~/.cache/awesome/awesome_stderr
