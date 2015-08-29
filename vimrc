@@ -70,8 +70,9 @@ if has("syntax")
   syntax on
 endif
 
+" Highlight trailing spaces
 hi EOL ctermbg=blue
-match EOL /$/
+match EOL /\s\+$/
 
 set colorcolumn=80
 hi colorcolumn ctermbg=red
