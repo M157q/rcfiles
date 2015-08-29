@@ -22,11 +22,12 @@ cmap w!! w !sudo tee %
 
 " auto remove trailing spaces when saving the file.
 fun! StripTrailingWhitespace()
-    "Don't strip on these filetypes
-    if &ft =~ 'markdown'
-        return
-    endif
     %s/\s\+$//e
+
+    "Add two spaces before each end of line for markdown
+    if &ft =~ 'markdown'
+        %s/$/  /e
+    endif
 endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
 
