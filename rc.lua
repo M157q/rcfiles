@@ -14,7 +14,7 @@ local menubar = require("menubar")
 -- vicious widgets library
 local vicious = require("vicious")
 
-awesome.font = "LiHei Pro 12"
+awesome.font = "WenQuanYi Zen Hei Mono 12"
 
 
 -- {{{ Error handling
@@ -62,14 +62,14 @@ local layouts =
 {
     -- delete useless layouts
     awful.layout.suit.tile,               -- 1 (tile.right)
-    awful.layout.suit.tile.left,          -- 2
-    awful.layout.suit.tile.bottom,        -- 3
+    awful.layout.suit.max,                -- 2
+    awful.layout.suit.tile.left,          -- 3
+    awful.layout.suit.tile.bottom,        -- 4
     -- awful.layout.suit.tile.top,           --
     -- awful.layout.suit.fair,               --
     -- awful.layout.suit.fair.horizontal,    --
     -- awful.layout.suit.spiral,             --
     -- awful.layout.suit.spiral.dwindle,     --
-    awful.layout.suit.max,                -- 4
     -- awful.layout.suit.max.fullscreen,     --
     -- awful.layout.suit.magnifier,          --
     awful.layout.suit.floating            -- 5
@@ -145,7 +145,7 @@ end
 
  -- network usage
  netwidget = wibox.widget.textbox()
- wireless_interface = ''
+ wireless_interface = 'wlp3s0'
  wired_interface = 'ens9'
  vicious.register(netwidget, vicious.widgets.net,
                  '<span color="#CC9090">⇩${' .. wireless_interface .. ' down_kb}</span>' ..
@@ -289,7 +289,7 @@ for s = 1, screen.count() do
     -- only display systray on screen 1
     if s == 1 then right_layout:add(wibox.widget.systray()) end
 
-    -- add my widgets (on screen 2 when i use duel screen)
+    -- add my widgets (on screen 2 when i use dual screen)
     if screen.count() == 2 then
         if s == 2 then
             right_layout:add(netwidget)
