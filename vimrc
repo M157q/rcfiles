@@ -1,18 +1,3 @@
-set number
-set backspace=2
-
-set expandtab
-set tabstop=4
-set shiftwidth=4
-
-set hlsearch
-set matchpairs+=<:>
-
-set colorcolumn=80
-hi colorcolumn ctermbg=darkblue
-set t_co=256
-
-
 " 色彩配置方案
 colo slate
 " :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
@@ -84,6 +69,25 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 if has("syntax")
   syntax on
 endif
+
+hi EOL ctermbg=blue
+match EOL /$/
+
+set colorcolumn=80
+hi colorcolumn ctermbg=red
+set t_co=256
+
+
+set number
+set backspace=2
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+
+set hlsearch
+set matchpairs+=<:>
+
 
 " The following are commented out as they cause vim to behave a lot
 " differently from regular Vi. They are highly recommended though.
