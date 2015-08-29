@@ -11,6 +11,8 @@ xrdb ~/.Xresources
 
 xcompmgr &
 guake &
-firefox &
+blueman-applet &
+pavucontrol &
+xscreen &
 
 exec awesome >> ~/.cache/awesome/awesome_stdout 2>> ~/.cache/awesome/awesome_stderr
