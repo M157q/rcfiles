@@ -13,6 +13,6 @@ xcompmgr &
 guake &
 blueman-applet &
 pavucontrol &
-xscreen &
+xscreensaver &
 
 exec awesome >> ~/.cache/awesome/awesome_stdout 2>> ~/.cache/awesome/awesome_stderr
