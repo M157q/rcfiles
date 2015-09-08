@@ -77,12 +77,15 @@ local layouts =
 -- }}}
 
 -- {{{ Wallpaper
+
+awful.util.spawn_with_shell("feh --no-fehbg --randomize --bg-fill /usr/share/archlinux/wallpaper/*")
+
 --  beautiful.wallpaper = ""
-if beautiful.wallpaper then
-    for s = 1, screen.count() do
-        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
-    end
-end
+-- if beautiful.wallpaper then
+--     for s = 1, screen.count() do
+--         gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+--     end
+-- end
 -- }}}
 
 -- {{{ Tags
