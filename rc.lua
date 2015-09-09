@@ -416,10 +416,61 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "p", function() menubar.show() end),
 
     -- lock my screen
-    awful.key({ modkey }, "F12", function () awful.util.spawn("xscreensaver-command -lock") end),
+    awful.key({ modkey }, "F12",
+        function () awful.util.spawn("xscreensaver-command -lock")
+    end),
 
     -- shutter as printscreen tools    http://shutter-project.org/
-    awful.key({ }, "Print", function () awful.util.spawn("/usr/bin/shutter") end)
+    awful.key({ }, "Print", function () awful.util.spawn("shutter") end),
+
+    -- MacBook Air function keys
+    awful.key({ }, "XF86MonBrightnessDown",
+        function ()
+            awful.util.spawn("xbacklight -dec 10")
+        end
+    ),
+    awful.key({ }, "XF86MonBrightnessUp",
+        function ()
+            awful.util.spawn("xbacklight -inc 10")
+        end
+    ),
+    awful.key({ }, "XF86LaunchA",
+        function ()
+            awful.util.spawn("xrandr --output eDP1 --auto --output DP1 --mode 1920x1080_60.00 --left-of eDP1")
+        end
+    ),
+    awful.key({ }, "XF86LaunchB",
+        function ()
+            awful.util.spawn("xrandr --output eDP1 --auto --output DP1 --mode 1920x1080_60.00 --same-as eDP1")
+        end
+    ),
+    awful.key({ }, "XF86KbdBrightnessDown",
+        function ()
+            awful.util.spawn("kbdlight down 10")
+        end
+    ),
+    awful.key({ }, "XF86KbdBrightnessUp",
+        function ()
+            awful.util.spawn("kbdlight up 10")
+        end
+    ),
+    awful.key({ }, "XF86AudioMute",
+        function ()
+            awful.util.spawn("pactl set-sink-mute 0 toggle")
+        end
+    ),
+    awful.key({ }, "XF86AudioLowerVolume",
+        function ()
+            awful.util.spawn("pactl set-sink-mute 0 false")
+            awful.util.spawn("pactl set-sink-volume 0 -5%")
+        end
+    ),
+    awful.key({ }, "XF86AudioRaiseVolume",
+        function ()
+            awful.util.spawn("pactl set-sink-mute 0 false")
+            awful.util.spawn("pactl set-sink-volume 0 +5%")
+        end
+   )
 
 )
 
