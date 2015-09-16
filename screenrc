@@ -20,11 +20,9 @@ bind u encoding utf8 utf8
 # 設定視窗回捲時可看到的行數
 defscrollback 2048
 
-# using Ctrl+Left & Ctrl+Right 
+# using Ctrl+Left & Ctrl+Right
 bindkey ^[[1;5D prev
 bindkey ^[[1;5C next
-bindkey \033[D prev
-bindkey \033[C next
 
-# use Ctrl+a shift+R to reload screenrc                                            
+# use Ctrl+a shift+R to reload screenrc
 bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
