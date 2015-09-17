@@ -12,7 +12,7 @@ xrdb ~/.Xresources
 
 # Start widgets
 xcompmgr &
-guake &
+urxvt &
 blueman-applet &
 pavucontrol &
 xscreensaver &
