@@ -7,7 +7,7 @@ URxvt*foreground:        green
 Urxvt*underlineurls: true
 
 ! load all extensions
-URxvt.perl-ext-common: default,searchable-scrollback,matcher,clipboard,url-select
+URxvt.perl-ext-common: default,searchable-scrollback,matcher,clipboard,url-select,keyboard-select
 
 ! scroll
 URxvt*scrollstyle:           plain
@@ -35,12 +35,20 @@ URxvt.colorUL: #4682B4
 ! default paste == ctrl + alt + v
 URxvt.clipboard.copycmd: xclip -selection clipboard -in
 URxvt.clipboard.pastecmd: xclip -selection clipboard -out
+URxvt.clipboard.autocopy: true
 
-!Yankable URLs
+! Yankable URLs
 ! keysym.M == 'alt'
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.url-select.launcher: /usr/bin/chromium --incognito
 URxvt.url-select.underline: true
+
+! Keyboard select (sudo pacman -S urxvt-perls)
+URxvt.copyCommand:  xclip -selection clipboard -in
+URxvt.pasteCommand: xclip -selection clipboard -out
+URxvt.keysym.M-y: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
 
 ! Xft settings
 Xft.dpi:        96
