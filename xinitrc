@@ -17,6 +17,8 @@ blueman-applet &
 pavucontrol &
 xscreensaver &
 wicd-gtk &
+chromium &
+vlc &
 
 # Autolock for suspending / hibernating
 xss-lock -- xscreensaver-command -lock &
