@@ -64,16 +64,16 @@ local layouts =
     -- delete useless layouts
     awful.layout.suit.tile,               -- 1 (tile.right)
     awful.layout.suit.max,                -- 2
-    awful.layout.suit.tile.left,          -- 3
-    awful.layout.suit.tile.bottom,        -- 4
+    -- awful.layout.suit.tile.left,       --
+    awful.layout.suit.tile.bottom,        -- 3
     -- awful.layout.suit.tile.top,           --
     -- awful.layout.suit.fair,               --
     -- awful.layout.suit.fair.horizontal,    --
     -- awful.layout.suit.spiral,             --
     -- awful.layout.suit.spiral.dwindle,     --
     -- awful.layout.suit.max.fullscreen,     --
-    -- awful.layout.suit.magnifier,          --
-    awful.layout.suit.floating            -- 5
+    awful.layout.suit.magnifier,          -- 4
+    -- awful.layout.suit.floating            --
 }
 -- }}}
 
@@ -96,9 +96,9 @@ for s = 1, screen.count() do
     tags[s] = awful.tag(
         {"⌨", "☠", "☢", "☣", "☮", "✈", "✍", "♺", "(．＿．?)"},
         s,
-        { layouts[2], layouts[2], layouts[2],
-          layouts[2], layouts[2], layouts[2],
-          layouts[5], layouts[5], layouts[2]
+        { layouts[1], layouts[1], layouts[1],
+          layouts[1], layouts[1], layouts[1],
+          layouts[1], layouts[1], layouts[1]
         }
     )
 end
