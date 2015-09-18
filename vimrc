@@ -1,5 +1,5 @@
 " 色彩配置方案
-colo slate
+" colo slate
 " :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
 " 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
 
@@ -29,30 +29,57 @@ autocmd BufWritePre * call StripTrailingWhitespace()
  " required!
  Plugin 'gmarik/Vundle.vim'
 
- " My Plugins here:
- "
- " original repos on github
- Plugin 'tpope/vim-fugitive'
- Plugin 'Lokaltog/vim-easymotion'
- Plugin 'scrooloose/nerdtree'
- Plugin 'xaizek/vim-inccomplete'
- Plugin 'davidhalter/jedi-vim'
+ " Browsing
+ Plugin 'scrooloose/nerdtree' " Project / Filetree
+ map <C-t> :NERDTreeToggle<CR>
 
- " vim-scripts repos
- Plugin 'L9'
- Plugin 'FuzzyFinder'
- Plugin 'snipMate'
- Plugin 'AutoComplPop'
- Plugin 'fakeclip'
- Plugin 'OmniCppComplete'
- Plugin 'matchit.zip'
- Plugin 'ctags.vim'
- Plugin 'phpcomplete.vim'
- Plugin 'cppcomplete'
- Plugin 'c.vim'
+ Plugin 'kien/ctrlp.vim'      " Buffer / File (C-p)
 
- call vundle#end()             " required!
- filetype plugin indent on     " required!
+ Plugin 'majutsushi/tagbar'   " Code. (:TagbarToggle)
+ map <C-y> :TagbarToggle<CR>
+
+ " Writing Code
+ Plugin 'Valloric/YouCompleteMe'    " Compelte Engine
+ let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
+ " avoid tab conflict to UltiSnips
+
+ Plugin 'scrooloose/nerdcommenter'  " Comment multi-lines. (<Leader>cc)
+
+ " UltiSnips
+ Plugin 'SirVer/ultisnips'
+ Plugin 'honza/vim-snippets'
+ let g:UltiSnipsEditSplit = "vertical"
+
+ " Source Control Integration
+ Plugin 'tpope/vim-fugitive'  " Git
+
+ " Vim Functionality
+ Plugin 'matchit.zip'         " Improve % matching in Vim
+ Plugin 'tpope/vim-surround'  " Made parenthesizing simple
+ Plugin 'scrooloose/syntastic'" Syntax checker
+ set statusline+=%#warningmsg#
+ set statusline+=%{SyntasticStatuslineFlag()}
+ set statusline+=%*
+ let g:syntastic_always_populate_loc_list = 1
+ let g:syntastic_auto_loc_list = 1
+ let g:syntastic_check_on_open = 1
+ let g:syntastic_check_on_wq = 0
+
+ " Scheme
+ Plugin 'bling/vim-airline'   " Status bar
+
+ Plugin 'altercation/vim-colors-solarized' " Color scheme
+ syntax enable
+ set background=dark
+ colorscheme solarized
+
+ Plugin 'freeo/vim-kalisi'
+ colorscheme kalisi
+ set background=dark
+
+
+ call vundle#end()            " required!
+ filetype plugin indent on    " required!
  "
  " Brief help
  " :PluginList          - list configured bundles
