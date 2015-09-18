@@ -32,12 +32,19 @@
  let g:UltiSnipsEditSplit = "vertical"
 
  " Source Control Integration
- Plugin 'tpope/vim-fugitive'  " Git
+ Plugin 'tpope/vim-fugitive'     " Git integration
+ Plugin 'airblade/vim-gitgutter' " Show diff from last git commit
 
  " Vim Functionality
- Plugin 'matchit.zip'         " Improve % matching in Vim
- Plugin 'tpope/vim-surround'  " Made parenthesizing simple
- Plugin 'scrooloose/syntastic'" Syntax checker
+ Plugin 'matchit.zip'             " Improve % matching in Vim
+ Plugin 'tpope/vim-surround'      " Made parenthesizing simple
+ Plugin 'junegunn/vim-easy-align' " Alignment
+ " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+ vmap <Enter> <Plug>(EasyAlign)
+ " Start interactive EasyAlign for a motion/text object (e.g. gaip)
+ nmap ga <Plug>(EasyAlign)
+
+ Plugin 'scrooloose/syntastic'    " Syntax checker
  set statusline+=%#warningmsg#
  set statusline+=%{SyntasticStatuslineFlag()}
  set statusline+=%*
