@@ -1,3 +1,4 @@
+-- <http://awesome.naquadah.org/wiki/FAQ>
 -- Standard awesome library
 local gears = require("gears")
 local awful = require("awful")
@@ -546,17 +547,51 @@ root.keys(globalkeys)
 awful.rules.rules = {
     -- All clients will match this rule.
     { rule = { },
-      properties = { border_width = beautiful.border_width,
-                     border_color = beautiful.border_normal,
-                     focus = awful.client.focus.filter,
-                     keys = clientkeys,
-                     buttons = clientbuttons } },
-    { rule = { class = "MPlayer" },
-      properties = { floating = true } },
-    { rule = { class = "pinentry" },
-      properties = { floating = true } },
-    { rule = { class = "gimp" },
-      properties = { floating = true } },
+      properties = {
+          border_width = beautiful.border_width,
+          border_color = beautiful.border_normal,
+          focus = awful.client.focus.filter,
+          keys = clientkeys,
+          buttons = clientbuttons
+     }
+    },
+
+    -- Start these clients to the currently focused tag, as floating
+    { rule = { class = "MPlayer" },     properties = { floating = true }},
+    { rule = { class = "pinentry" },    properties = { floating = true }},
+    { rule = { class = "gimp" },        properties = { floating = true }},
+
+    -- Start these clients on specific tag
+    { rule = { instance = "rxvt" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][1], c
+      ) end
+    },
+    { rule = { class = "Chromium" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][2], c
+      ) end
+    },
+    { rule = { class = "Firefox" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][3], c
+      ) end
+    },
+    { rule = { class = "Vlc" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][4], c
+      ) end
+    },
+    { rule = { class = "Wicd" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][9], c
+      ) end
+    },
+    { rule = { class = "Pavucontrol" },
+      callback = function(c) awful.client.movetotag(
+          tags[mouse.screen][9], c
+      ) end
+    },
 }
 -- }}}
 
