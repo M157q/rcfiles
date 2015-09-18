@@ -3,10 +3,10 @@ oh_my_zsh = 'https://github.com/robbyrussell/oh-my-zsh.git'
 oh_my_fish = 'https://github.com/bpinto/oh-my-fish.git'
 oh_my_fish_config_dir = '$(HOME)/.config/fish'
 vundle = 'https://github.com/gmarik/Vundle.vim'
+kernel = '$(shell uname -s)'
 
 install:
 	# For Linux X Window
-	kernel='$(shell uname -s)'
 	if [ $(kernel) == 'Linux' ]; then \
 		ln -sf $(rcfiles)/xinitrc $(HOME)/.xinitrc; \
 		ln -sf $(rcfiles)/Xresources $(HOME)/.Xresources; \
@@ -53,5 +53,3 @@ clean:
 	rm -rf $(HOME)/.vim
 
 update: clean install
-
-

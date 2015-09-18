@@ -26,3 +26,6 @@ bindkey ^[[1;5C next
 
 # use Ctrl+a shift+R to reload screenrc
 bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
+
+# use 256 colors
+term screen-256color
