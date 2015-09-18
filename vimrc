@@ -1,22 +1,3 @@
-" 色彩配置方案
-" colo slate
-" :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
-" 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
-
-cmap w!! w !sudo tee %
-
-" auto remove trailing spaces when saving the file.
-fun! StripTrailingWhitespace()
-    %s/\s\+$//e
-
-    "Add two spaces before each end of line for markdown
-    if &ft =~ 'markdown'
-        %s/$/  /e
-    endif
-endfun
-autocmd BufWritePre * call StripTrailingWhitespace()
-
-
 "============== Vundle ===============
  set nocompatible               " be iMproved
  filetype off                   " required!
@@ -67,15 +48,9 @@ autocmd BufWritePre * call StripTrailingWhitespace()
 
  " Scheme
  Plugin 'bling/vim-airline'   " Status bar
-
- Plugin 'altercation/vim-colors-solarized' " Color scheme
- syntax enable
- set background=dark
- colorscheme solarized
-
  Plugin 'freeo/vim-kalisi'
- colorscheme kalisi
- set background=dark
+ let g:airline_theme='kalisi'
+ Plugin 'altercation/vim-colors-solarized' " Color scheme
 
 
  call vundle#end()            " required!
@@ -90,6 +65,35 @@ autocmd BufWritePre * call StripTrailingWhitespace()
  " see :h vundle for more details or wiki for FAQ
  " NOTE: comments after Plugin command are not allowed..
 "============================================================================
+
+" Color Scheme
+" vim-kalisi
+ colorscheme kalisi
+ set background=dark
+
+" vim-colors-solarized
+"syntax enable
+"set background=dark
+"colorscheme solarized
+
+" colo slate
+" :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
+" 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
+
+
+" === Custom by me ===
+cmap w!! w !sudo tee %
+
+" auto remove trailing spaces when saving the file.
+fun! StripTrailingWhitespace()
+    %s/\s\+$//e
+
+    "Add two spaces before each end of line for markdown
+    if &ft =~ 'markdown'
+        %s/$/  /e
+    endif
+endfun
+autocmd BufWritePre * call StripTrailingWhitespace()
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the
 " following enables syntax highlighting by default.
