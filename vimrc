@@ -12,12 +12,12 @@
 
  " Browsing
  Plugin 'scrooloose/nerdtree' " Project / Filetree
- map <C-t> :NERDTreeToggle<CR>
+ map <F7> :NERDTreeToggle<CR>
 
- Plugin 'kien/ctrlp.vim'      " Buffer / File (C-p)
+ Plugin 'kien/ctrlp.vim'      " Buffer / File <c-p>
 
- Plugin 'majutsushi/tagbar'   " Code. (:TagbarToggle)
- map <C-y> :TagbarToggle<CR>
+ Plugin 'majutsushi/tagbar'   " Code.
+ map <F8> :TagbarToggle<CR>
 
  " Writing Code
  Plugin 'Valloric/YouCompleteMe'    " Compelte Engine
@@ -48,9 +48,8 @@
 
  " Scheme
  Plugin 'bling/vim-airline'   " Status bar
- Plugin 'freeo/vim-kalisi'
  let g:airline_theme='kalisi'
- Plugin 'altercation/vim-colors-solarized' " Color scheme
+ set laststatus=2             " Let airline appear all time.
 
 
  call vundle#end()            " required!
@@ -66,17 +65,8 @@
  " NOTE: comments after Plugin command are not allowed..
 "============================================================================
 
-" Color Scheme
-" vim-kalisi
- colorscheme kalisi
- set background=dark
-
-" vim-colors-solarized
-"syntax enable
-"set background=dark
-"colorscheme solarized
-
-" colo slate
+" === Color Scheme ===
+colo slate
 " :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
 " 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
 
@@ -133,9 +123,9 @@ set autowrite      " Automatically save before commands like :next and :make
 "set mouse=a        " Enable mouse usage (all modes)
 
 " Source a global configuration file if available
-if filereadable("/etc/vim/vimrc.local")
-  source /etc/vim/vimrc.local
-endif
+" if filereadable("/etc/vim/vimrc.local")
+"   source /etc/vim/vimrc.local
+" endif
 
 " multi-encoding setting
 if has("multi_byte")
