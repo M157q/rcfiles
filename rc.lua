@@ -381,6 +381,8 @@ globalkeys = awful.util.table.join(
     -- awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
     -- awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1)         end),
     -- awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1)         end),
+    awful.key({ modkey, "Control"   }, "h", function () awful.client.swap.byidx(  1)    end),
+    awful.key({ modkey, "Control"   }, "l", function () awful.client.swap.byidx( -1)    end),
 
     -- change window layouts
     awful.key({ modkey,           }, "space", function () awful.layout.inc(layouts,  1) end),
