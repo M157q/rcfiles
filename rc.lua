@@ -418,7 +418,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey }, "F12", function () awful.util.spawn("xscreensaver-command -lock") end),
 
     -- shutter as printscreen tools    http://shutter-project.org/
-    awful.key({ }, "Print", function () awful.util.spawn("/usr/bin/shutter") end)
+    awful.key({ }, "Print", function () awful.util.spawn("shutter -a -e -n") end)
 
 )
 
