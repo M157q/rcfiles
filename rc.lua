@@ -424,7 +424,7 @@ globalkeys = awful.util.table.join(
     end),
 
     -- shutter as printscreen tools    http://shutter-project.org/
-    awful.key({ }, "Print", function () awful.util.spawn("shutter") end),
+    awful.key({ }, "Print", function () awful.util.spawn("shutter -a -e -n") end),
 
     -- MacBook Air function keys
     awful.key({ }, "XF86MonBrightnessDown",
