@@ -1,4 +1,4 @@
-rcfiles = '$(HOME)/rcfiles'
+rcfiles = '$(HOME)/dotfiles'
 oh_my_zsh = 'https://github.com/robbyrussell/oh-my-zsh.git'
 vundle = 'https://github.com/gmarik/Vundle.vim'
 kernel = '$(shell uname -s)'
@@ -27,7 +27,7 @@ install:
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(rcfiles)/vimrc $(HOME)/.vimrc
-	vim +BundleInstall +qall
+	vim +PluginInstall +qall
 
 clean:
 	rm -f $(HOME)/.screenrc
