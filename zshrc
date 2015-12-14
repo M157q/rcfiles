@@ -89,3 +89,4 @@ export EDITOR='vim'
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source $HOME/.bash_aliases
+export TERM='xterm-256color'
