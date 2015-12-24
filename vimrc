@@ -38,11 +38,6 @@
  " Vim Functionality
  Plugin 'matchit.zip'             " Improve % matching in Vim
  Plugin 'tpope/vim-surround'      " Made parenthesizing simple
- Plugin 'junegunn/vim-easy-align' " Alignment
- " Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
- vmap <Enter> <Plug>(EasyAlign)
- " Start interactive EasyAlign for a motion/text object (e.g. gaip)
- nmap ga <Plug>(EasyAlign)
 
  Plugin 'scrooloose/syntastic'    " Syntax checker
  set statusline+=%#warningmsg#
@@ -61,6 +56,8 @@
 
  call vundle#end()            " required!
  filetype plugin indent on    " required!
+ " To ignore plugin indent changes, instead use:
+ " "filetype plugin on
  "
  " Brief help
  " :PluginList          - list configured bundles
@@ -102,17 +99,20 @@ endif
 hi EOL ctermbg=blue
 match EOL /\s\+$/
 
+set t_Co=256
 set colorcolumn=80
 hi colorcolumn ctermbg=red
-set t_co=256
-
 
 set number
 set backspace=2
 
-set expandtab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
+set expandtab
+
+set foldmethod=indent
+set foldlevel=99
 
 set hlsearch
 set matchpairs+=<:>
