@@ -90,3 +90,8 @@ export EDITOR='vim'
 
 source $HOME/.bash_aliases
 export TERM='xterm-256color'
+
+# execute screenfetch if it has been installed
+if [[ -x `which screenfetch` ]]; then
+    screenfetch
+fi
