@@ -112,6 +112,7 @@ proxy_list() {
     env | grep -i proxy
 }
 
+# execute screenfetch if it has been installed
 if [[ -x `which screenfetch` ]]; then
     screenfetch
 fi
