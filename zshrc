@@ -90,3 +90,24 @@ export EDITOR='vim'
 
 source $HOME/.bash_aliases
 export TERM='xterm-256color'
+
+# Proxy
+hp_proxy='http://web-proxy.sgp.hp.com:8080'
+
+proxy_on() {
+    export http_proxy=$hp_proxy
+    export https_proxy=$hp_proxy
+    export ftp_proxy=$hp_proxy
+    export rsync_proxy=$hp_proxy
+}
+
+proxy_off() {
+    unset http_proxy
+    unset https_proxy
+    unset ftp_proxy
+    unset rsync_proxy
+}
+
+proxy_list() {
+    env | grep -i proxy
+}
