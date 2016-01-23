@@ -111,3 +111,7 @@ proxy_off() {
 proxy_list() {
     env | grep -i proxy
 }
+
+if [[ -x `which screenfetch` ]]; then
+    screenfetch
+fi
