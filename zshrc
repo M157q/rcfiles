@@ -48,11 +48,11 @@ COMPLETION_WAITING_DOTS="true"
 
 kernel=`uname -s`
 if [ $kernel = 'Darwin' ]; then
-    plugins=(osx brew screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper)
+    plugins=(osx brew screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper docker)
 elif [ $kernel = 'Linux' ]; then
-    plugins=(archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper)
+    plugins=(archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper docker)
 else
-    plugins=(screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper)
+    plugins=(screen git github gnu-utils mosh nmap npm pip python tmux virtualenvwrapper docker)
 fi
 
 source $ZSH/oh-my-zsh.sh
