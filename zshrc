@@ -88,10 +88,5 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source $HOME/.bash_aliases
 export TERM='xterm-256color'
-
-# execute screenfetch if it has been installed
-if [[ -x `which screenfetch` ]]; then
-    screenfetch
-fi
+source $HOME/.bash_aliases
