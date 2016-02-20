@@ -17,7 +17,6 @@ blueman-applet &
 pavucontrol &
 xscreensaver &
 wicd-gtk &
-firefox &
 vlc &
 
 
