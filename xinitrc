@@ -24,6 +24,9 @@ vlc &
 xrandr --newmode "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
 xrandr --addmode DP1 1920x1080_60.00
 
+xrandr --newmode "1600x900_60.00"  173.00  1600 2048 2248 2576  900 1083 1088 1120 -hsync +vsync
+xrandr --addmode DP1 1600x900_60.00
+
 xrandr --newmode "1280x720_60.00"   74.50  1280 1344 1472 1664  720 723 728 748 -hsync +vsync
 xrandr --addmode DP1 1280x720_60.00
 
@@ -34,4 +37,6 @@ xrandr --addmode DP1 1024x768_60.00
 
 # Start awesomewm
 # exec awesome >> ~/.cache/awesome/awesome_stdout 2>> ~/.cache/awesome/awesome_stderr
+
+# Start i3wm
 exec i3 2>> ~/i3_stderr
