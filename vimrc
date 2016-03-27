@@ -1,80 +1,3 @@
-"============== Vundle ===============
- set nocompatible               " be iMproved
- filetype off                   " required!
-
- " set the runtime path to include Vundle and initialize
- set rtp+=~/.vim/bundle/Vundle.vim
- call vundle#begin()
-
- " let Vundle manage Vundle
- " required!
- Plugin 'gmarik/Vundle.vim'
-
- " Browsing
- Plugin 'scrooloose/nerdtree' " Project / Filetree
- map <F7> :NERDTreeToggle<CR>
-
- Plugin 'kien/ctrlp.vim'      " Buffer / File <c-p>
-
- Plugin 'majutsushi/tagbar'   " Code.
- map <F8> :TagbarToggle<CR>
-
- " Writing Code
- Plugin 'Valloric/YouCompleteMe'    " Compelte Engine
- let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
- " avoid tab conflict to UltiSnips
-
- Plugin 'scrooloose/nerdcommenter'  " Comment multi-lines. (<Leader>cc)
-
- " UltiSnips
- Plugin 'SirVer/ultisnips'
- Plugin 'honza/vim-snippets'
- let g:UltiSnipsEditSplit = "vertical"
-
- " Source Control Integration
- Plugin 'tpope/vim-fugitive'     " Git integration
- Plugin 'airblade/vim-gitgutter' " Show diff from last git commit
-
- " Vim Functionality
- Plugin 'matchit.zip'             " Improve % matching in Vim
- Plugin 'tpope/vim-surround'      " Made parenthesizing simple
-
- Plugin 'scrooloose/syntastic'    " Syntax checker
- set statusline+=%#warningmsg#
- set statusline+=%{SyntasticStatuslineFlag()}
- set statusline+=%*
- let g:syntastic_always_populate_loc_list = 1
- let g:syntastic_auto_loc_list = 1
- let g:syntastic_check_on_open = 0
- let g:syntastic_check_on_wq = 0
-
- " Scheme
- Plugin 'bling/vim-airline'   " Status bar
- let g:airline_theme='kalisi'
- set laststatus=2             " Let airline appear all time.
-
-
- call vundle#end()            " required!
- filetype plugin indent on    " required!
- " To ignore plugin indent changes, instead use:
- " "filetype plugin on
- "
- " Brief help
- " :PluginList          - list configured bundles
- " :PluginInstall(!)    - install(update) bundles
- " :PluginSearch(!) foo - search(or refresh cache first) for foo
- " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
- "
- " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Plugin command are not allowed..
-"============================================================================
-
-" === Color Scheme ===
-colo slate
-" :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
-" 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
-
-
 " === Custom by me ===
 cmap w!! w !sudo tee %
 
@@ -170,3 +93,80 @@ endif
 else
 echoerr "Sorry, this version of (g)vim was not compiled with multi_byte"
 endif
+
+
+"============== Vundle ===============
+ set nocompatible               " be iMproved
+ filetype off                   " required!
+
+ " set the runtime path to include Vundle and initialize
+ set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#begin()
+
+ " let Vundle manage Vundle
+ " required!
+ Plugin 'gmarik/Vundle.vim'
+
+ " Browsing
+ Plugin 'scrooloose/nerdtree' " Project / Filetree
+ map <F7> :NERDTreeToggle<CR>
+
+ Plugin 'kien/ctrlp.vim'      " Buffer / File <c-p>
+
+ Plugin 'majutsushi/tagbar'   " Code.
+ map <F8> :TagbarToggle<CR>
+
+ " Writing Code
+ Plugin 'Valloric/YouCompleteMe'    " Compelte Engine
+ let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
+ " avoid tab conflict to UltiSnips
+
+ Plugin 'scrooloose/nerdcommenter'  " Comment multi-lines. (<Leader>cc)
+
+ " UltiSnips
+ Plugin 'SirVer/ultisnips'
+ Plugin 'honza/vim-snippets'
+ let g:UltiSnipsEditSplit = "vertical"
+
+ " Source Control Integration
+ Plugin 'tpope/vim-fugitive'     " Git integration
+ Plugin 'airblade/vim-gitgutter' " Show diff from last git commit
+
+ " Vim Functionality
+ Plugin 'matchit.zip'             " Improve % matching in Vim
+ Plugin 'tpope/vim-surround'      " Made parenthesizing simple
+
+ Plugin 'scrooloose/syntastic'    " Syntax checker
+ set statusline+=%#warningmsg#
+ set statusline+=%{SyntasticStatuslineFlag()}
+ set statusline+=%*
+ let g:syntastic_always_populate_loc_list = 1
+ let g:syntastic_auto_loc_list = 1
+ let g:syntastic_check_on_open = 0
+ let g:syntastic_check_on_wq = 0
+
+ " Scheme
+ Plugin 'bling/vim-airline'   " Status bar
+ let g:airline_theme='kalisi'
+ set laststatus=2             " Let airline appear all time.
+
+
+ call vundle#end()            " required!
+ filetype plugin indent on    " required!
+ " To ignore plugin indent changes, instead use:
+ " "filetype plugin on
+ "
+ " Brief help
+ " :PluginList          - list configured bundles
+ " :PluginInstall(!)    - install(update) bundles
+ " :PluginSearch(!) foo - search(or refresh cache first) for foo
+ " :PluginClean(!)      - confirm(or auto-approve) removal of unused bundles
+ "
+ " see :h vundle for more details or wiki for FAQ
+ " NOTE: comments after Plugin command are not allowed..
+"============================================================================
+
+" === Color Scheme ===
+colo slate
+" :colorscheme [色彩配置方案] 或是 colo [色彩配置方案]都可以
+" 可以直接進到vim下達 :colo 再按tab，瀏覽各種不同的色彩配置方案
