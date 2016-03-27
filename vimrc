@@ -150,6 +150,7 @@ endif
  let g:airline_theme='kalisi'
  set laststatus=2             " Let airline appear all time.
 
+ Plugin 'wilsaj/chuck.vim'    " Plugin for ChucK
 
  call vundle#end()            " required!
  filetype plugin indent on    " required!
