@@ -13,11 +13,8 @@ xrdb ~/.Xresources
 # Start widgets
 xcompmgr &
 urxvt &
-blueman-applet &
 pavucontrol &
 xscreensaver &
-wicd-gtk &
-vlc &
 
 
 # xrandr workaroud for thunderbot2VGA hotplug
