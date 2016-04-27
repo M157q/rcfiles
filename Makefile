@@ -32,6 +32,16 @@ install:
 	vim +PluginInstall +qall
 
 clean:
+	# For Linux X Window
+	if [ $(kernel) == 'Linux' ]; then \
+		rm -f $(HOME)/.xinitrc; \
+		rm -f $(HOME)/.Xresources; \
+		rm -f $(HOME)/.Xmodmap; \
+		rm -f $(HOME)/.fonts.conf; \
+		rm -f $(HOME)/.config/awesome/rc.lua; \
+		rm -f $(HOME)/.i3/config; \
+	fi;
+
 	rm -f $(HOME)/.screenrc
 	rm -f $(HOME)/.bashrc
 	rm -f $(HOME)/.bash_aliases
