@@ -14,6 +14,8 @@ install:
 		ln -sf $(rcfiles)/fonts.conf $(HOME)/.fonts.conf; \
 		mkdir -p $(HOME)/.config/awesome; \
 		ln -sf $(rcfiles)/rc.lua $(HOME)/.config/awesome/rc.lua; \
+		mkdir -p $(HOME)/.i3; \
+		ln -sf $(rcfiles)/i3config $(HOME)/.i3/config; \
 	fi;
 
 	ln -sf $(rcfiles)/screenrc $(HOME)/.screenrc
