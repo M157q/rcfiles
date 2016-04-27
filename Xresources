@@ -1,22 +1,28 @@
 ! Urxvt {{{
-! color settings
+! Color settings
 URxvt*termName:          rxvt-256color
 URxvt*depth:             32
 URxvt*background:        black
 URxvt*foreground:        green
 Urxvt*underlineurls: true
 
-! load all extensions
-URxvt.perl-ext-common: default,searchable-scrollback,matcher,clipboard,url-select,keyboard-select
+! Load extensions
+URxvt.perl-ext-common: default,searchable-scrollback,matcher,clipboard,url-select,keyboard-select,font-size
 
 ! scroll
 URxvt*scrollstyle:           plain
 URxvt*mouseWheelScrollPage:  1
 URxvt*cursorBlink:           1
 
-! font
+! Font
 URxvt*font:xft:WenQuanYi Zen Hei Mono:bold:size=18:antialias=true
 URxvt*internalBorder:   1
+
+! Resize font on the fly
+! https://github.com/majutsushi/urxvt-font-size
+! yaourt -S urxvt-font-size-git
+URxvt.keysym.Control-equal: perl:font-size:increase
+URxvt.keysym.Control-minus: perl:font-size:decrease
 
 ! Fix font width
 URxvt.letterSpace: -3
