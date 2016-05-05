@@ -80,3 +80,6 @@ fi
 
 # For Ruby gem
 export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH";
+
+# https://github.com/nvbn/thefuck
+eval "$(thefuck --alias)"
