@@ -138,6 +138,9 @@ autocmd BufWritePre * call StripTrailingWhitespace()
  let g:syntastic_auto_loc_list = 1
  let g:syntastic_check_on_open = 0
  let g:syntastic_check_on_wq = 0
+ nnoremap sn :lnext<cr>
+ nnoremap sp :lprevious<cr>
+
 
  " Scheme
  Plugin 'bling/vim-airline'   " Status bar
