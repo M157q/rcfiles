@@ -18,6 +18,7 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+set smarttab
 
 " Fold
 set foldmethod=indent " Groups of lines with the same indent form a fold
