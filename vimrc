@@ -65,7 +65,7 @@ match TAB /\t/
 
 " Highlight cursor column
 set cursorcolumn
-highlight CursorColumn ctermbg=yellow
+highlight CursorColumn ctermbg=blue
 
 
 "==============================================================================
