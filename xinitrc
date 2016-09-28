@@ -14,7 +14,6 @@ xrdb ~/.Xresources
 xcompmgr &
 urxvt &
 pavucontrol &
-xscreensaver &
 
 
 # xrandr workaroud for thunderbot2VGA hotplug
