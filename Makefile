@@ -1,4 +1,4 @@
-rcfiles = '$(HOME)/dotfiles'
+dotfiles = '$(HOME)/dotfiles'
 oh_my_zsh = 'https://github.com/robbyrussell/oh-my-zsh.git'
 vundle = 'https://github.com/gmarik/Vundle.vim'
 kernel = '$(shell uname -s)'
@@ -6,29 +6,29 @@ kernel = '$(shell uname -s)'
 install:
 	# For Linux X Window
 	if [ $(kernel) == 'Linux' ]; then \
-		ln -sf $(rcfiles)/xinitrc $(HOME)/.xinitrc; \
-		ln -sf $(rcfiles)/Xresources $(HOME)/.Xresources; \
-		ln -sf $(rcfiles)/Xmodmap $(HOME)/.Xmodmap; \
-		ln -sf $(rcfiles)/fonts.conf $(HOME)/.fonts.conf; \
+		ln -sf $(dotfiles)/xinitrc $(HOME)/.xinitrc; \
+		ln -sf $(dotfiles)/Xresources $(HOME)/.Xresources; \
+		ln -sf $(dotfiles)/Xmodmap $(HOME)/.Xmodmap; \
+		ln -sf $(dotfiles)/fonts.conf $(HOME)/.fonts.conf; \
 		mkdir -p $(HOME)/.config/awesome; \
-		ln -sf $(rcfiles)/rc.lua $(HOME)/.config/awesome/rc.lua; \
+		ln -sf $(dotfiles)/rc.lua $(HOME)/.config/awesome/rc.lua; \
 		mkdir -p $(HOME)/.i3; \
-		ln -sf $(rcfiles)/i3config $(HOME)/.i3/config; \
+		ln -sf $(dotfiles)/i3config $(HOME)/.i3/config; \
 	fi;
 
-	ln -sf $(rcfiles)/screenrc $(HOME)/.screenrc
-	ln -sf $(rcfiles)/bashrc $(HOME)/.bashrc
-	ln -sf $(rcfiles)/bash_aliases $(HOME)/.bash_aliases
-	ln -sf $(rcfiles)/tcshrc $(HOME)/.tcshrc
-	ln -sf $(rcfiles)/tmux.conf $(HOME)/.tmux.conf
+	ln -sf $(dotfiles)/screenrc $(HOME)/.screenrc
+	ln -sf $(dotfiles)/bashrc $(HOME)/.bashrc
+	ln -sf $(dotfiles)/bash_aliases $(HOME)/.bash_aliases
+	ln -sf $(dotfiles)/tcshrc $(HOME)/.tcshrc
+	ln -sf $(dotfiles)/tmux.conf $(HOME)/.tmux.conf
 
 	# oh-my-zsh
 	git clone $(oh_my_zsh) $(HOME)/.oh-my-zsh
-	ln -sf $(rcfiles)/zshrc $(HOME)/.zshrc
+	ln -sf $(dotfiles)/zshrc $(HOME)/.zshrc
 
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
-	ln -sf $(rcfiles)/vimrc $(HOME)/.vimrc
+	ln -sf $(dotfiles)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
 
 clean:
