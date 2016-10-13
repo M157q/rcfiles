@@ -1,4 +1,4 @@
-dotfiles = '$(HOME)/dotfiles'
+dotfiles = '$(PWD)'
 oh_my_zsh = 'https://github.com/robbyrussell/oh-my-zsh.git'
 vundle = 'https://github.com/gmarik/Vundle.vim'
 kernel = '$(shell uname -s)'
