@@ -38,7 +38,7 @@ install:
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(dotfiles)/vimrc $(HOME)/.vimrc
-	vim +BundleInstall +qall
+	vim +PluginInstall +qall
 
 clean:
 	# For Linux X Window
