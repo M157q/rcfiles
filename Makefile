@@ -21,6 +21,7 @@ install:
 	ln -sf $(dotfiles)/bash_aliases $(HOME)/.bash_aliases
 	ln -sf $(dotfiles)/tcshrc $(HOME)/.tcshrc
 	ln -sf $(dotfiles)/tmux.conf $(HOME)/.tmux.conf
+	ln -sf $(dotfiles)/gitconfig $(HOME)/.gitconfig
 
 	# oh-my-zsh
 	git clone $(oh_my_zsh) $(HOME)/.oh-my-zsh
@@ -47,6 +48,7 @@ clean:
 	rm -f $(HOME)/.bash_aliases
 	rm -f $(HOME)/.tcshrc
 	rm -f $(HOME)/.tmux.conf
+	rm -f $(HOME)/.gitconfig
 	rm -f $(HOME)/.zshrc
 	rm -rf $(HOME)/.oh-my-zsh
 	rm -f $(HOME)/.vimrc
