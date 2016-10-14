@@ -1,7 +1,7 @@
 # Docker
-# http://stackoverflow.com/questions/17236796/how-to-remove-old-docker-containers
-alias docker_remove_unused_containers="docker ps -f 'status=exited' | awk '{print \$1}' | tail -n +2 | xargs --no-run-if-empty docker rm"
-alias docker_remove_unused_images="docker images | grep '<none>' | awk '{print \$3}' | xargs --no-run-if-empty docker rmi"
+# https://twitter.com/kakashiliu/status/778647927468154880
+alias docker_remove_unused_containers="docker ps -aqf status=exited | xargs --no-run-if-empty docker rm"
+alias docker_remove_unused_images="docker images -aqf dangling=true | xargs --no-run-if-empty docker rmi"
 
 # rm protect
 alias rm='rm -i'
