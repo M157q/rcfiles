@@ -183,7 +183,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-mute 0 false &&
 
 
 # https://faq.i3wm.org/question/239/how-do-i-suspendlockscreen-and-logout.1.html
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+BackSpace mode "$mode_system"
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
     bindsym l exec --no-startup-id i3lock -c 000000, mode "default"
