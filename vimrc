@@ -135,12 +135,16 @@ autocmd BufWritePre * call StripTrailingWhitespace()
  set statusline+=%#warningmsg#
  set statusline+=%{SyntasticStatuslineFlag()}
  set statusline+=%*
+ let g:syntastic_debug = 0
  let g:syntastic_always_populate_loc_list = 1
  let g:syntastic_auto_loc_list = 1
  let g:syntastic_check_on_open = 0
  let g:syntastic_check_on_wq = 0
- let g:syntastic_python_checkers=["flake8","pep8","pyflakes","pylint"]
- let g:syntastic_python_flake8_args='--ignore=E501'
+ " syntastic will use this order for python checkers,
+ " if one of them is not installed, it stops.
+ let g:syntastic_python_checkers = ["flake8","pep8","pyflakes","pylint"]
+ let g:syntastic_python_flake8_args = '--ignore=E501'
+ let g:syntastic_python_pep8_args = '--ignore=E501'
  nnoremap sn :lnext<cr>
  nnoremap sp :lprevious<cr>
 
