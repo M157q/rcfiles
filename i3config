@@ -161,8 +161,8 @@ bindsym Print exec --no-startup-id shutter -a -n -e
 
 # Enabling Multi-media keys
 # https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5
 
 bindsym XF86LaunchA exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --mode 1920x1080_60.00 --left-of eDP1
 # bindsym XF86LaunchB exec --no-startup-id xrandr --output eDP1 --auto --output DP1 --mode 1920x1080_60.00 --same-as eDP1
