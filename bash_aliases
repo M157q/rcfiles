@@ -84,3 +84,8 @@ fi
 
 # For Ruby gem
 export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH";
+
+# https://github.com/nvbn/thefuck
+if [[ -x `which thefuck` ]]; then
+    eval "$(thefuck --alias)"
+fi
