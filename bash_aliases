@@ -89,3 +89,8 @@ export PATH="$HOME/.gem/ruby/2.3.0/bin:$PATH";
 if [[ -x `which thefuck` ]]; then
     eval "$(thefuck --alias)"
 fi
+
+# Weather in terminal
+function weather () {
+    curl -s wttr.in/${@:-taipei}\?m | head -n 7
+}
