@@ -87,6 +87,8 @@ fun! StripTrailingWhitespace()
 endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
 
+set tabpagemax=100
+
 
 "==============================================================================
 " Vundle Settings for Plugins
