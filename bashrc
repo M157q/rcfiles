@@ -151,3 +151,6 @@ export PATH="$HOME/perl5/bin:$PATH";
 
 # added by travis gem
 [ -f /home/m157q/.travis/travis.sh ] && source /home/m157q/.travis/travis.sh
+
+# Set GPG_TTY for pinentry-curses
+export GPG_TTY=$(tty)

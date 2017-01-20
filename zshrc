@@ -90,3 +90,6 @@ export EDITOR='vim'
 
 export TERM='xterm-256color'
 source $HOME/.bash_aliases
+
+# Set GPG_TTY for pinentry-curses
+export GPG_TTY=$(tty)
