@@ -6,8 +6,10 @@ export GTK_IM_MODULE=gcin
 export QT_IM_MODULE=gcin
 export QT4_IM_MODULE=gcin
 
-# Pre-Settings
-xmodmap ~/.Xmodmap
+# Swap CapsLock and Ctrl
+setxkbmap -option ctrl:swapcaps -option caps:capslock
+
+# Custom settings for urxvt
 xrdb ~/.Xresources
 
 # Start widgets
