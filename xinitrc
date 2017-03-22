@@ -6,7 +6,10 @@ export GTK_IM_MODULE=gcin
 export QT_IM_MODULE=gcin
 export QT4_IM_MODULE=gcin
 
-xmodmap ~/.Xmodmap
+# Swap CapsLock and Ctrl
+setxkbmap -option ctrl:swapcaps -option caps:capslock
+
+# Custom settings for urxvt
 xrdb ~/.Xresources
 
 batterymon &
