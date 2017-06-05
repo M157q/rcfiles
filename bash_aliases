@@ -94,3 +94,7 @@ fi
 function weather () {
     curl -s wttr.in/${@:-taipei}\?m | head -n 7
 }
+
+# For using pipsi
+# https://github.com/mitsuhiko/pipsi
+export PATH="$HOME/.local/bin:$PATH";
