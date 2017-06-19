@@ -8,6 +8,17 @@ Just a bunch of my dotfiles.
         + `sudo pacman -S base-devel`  
     + Debian / Ubuntu  
         + `sudo apt-get install build-essential`  
++ `git`  
+    + Arch Linux  
+        + `sudo pacman -S git`  
+            + It's in `extra` repo, you need to uncomment the part in the `/etc/pacman.conf`  
+    + Debian / Ubuntu  
+        + `sudo apt-get install git`  
++ `vim`  
+    + Arch Linux  
+        + `sudo pacman -S vim`  
+    + Debian / Ubuntu  
+        + `sudo apt-get install vim`  
   
 ## Usage  
 Make sure you have git installed and the network connection is fine.  
