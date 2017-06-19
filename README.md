@@ -1,6 +1,14 @@
 # dotfiles  
 Just a bunch of my dotfiles.  
   
+## Requirements  
+  
++ `make`  
+    + Arch Linux  
+        + `sudo pacman -S base-devel`  
+    + Debian / Ubuntu  
+        + `sudo apt-get install build-essential`  
+  
 ## Usage  
 Make sure you have git installed and the network connection is fine.  
   
