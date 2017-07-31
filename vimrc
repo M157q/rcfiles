@@ -153,6 +153,7 @@ set tabpagemax=100
 
  " Scheme
  Plugin 'bling/vim-airline'   " Status bar
+ Plugin 'vim-airline/vim-airline-themes'   " Themes of vim-airline
  let g:airline_theme='kalisi'
  set laststatus=2             " Let airline appear all time.
 
