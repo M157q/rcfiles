@@ -64,17 +64,6 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 
-# we love UTF-8 environment!
-#export LANG=zh_TW.UTF-8
-#export LC_CTYPE=zh_TW.UTF-8
-#export LC_ALL=zh_TW.UTF-8
-
-export LANG=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export EDITOR=vim
-
-
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
@@ -142,15 +131,10 @@ git_branch () {
 #    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
 #}
 
-#perl cpan
-export PERL_LOCAL_LIB_ROOT="$PERL_LOCAL_LIB_ROOT:$HOME/perl5";
-export PERL_MB_OPT="--install_base $HOME/perl5";
-export PERL_MM_OPT="INSTALL_BASE=$HOME/perl5";
-export PERL5LIB="$HOME/perl5/lib/perl5:$PERL5LIB";
-export PATH="$HOME/perl5/bin:$PATH";
-
 # added by travis gem
 [ -f /home/m157q/.travis/travis.sh ] && source /home/m157q/.travis/travis.sh
 
 # Set GPG_TTY for pinentry-curses
 export GPG_TTY=$(tty)
+
+source $HOME/.shrc

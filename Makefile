@@ -20,6 +20,7 @@ install:
 	fi;
 
 	ln -sf $(dotfiles)/screenrc $(HOME)/.screenrc
+	ln -sf $(dotfiles)/shrc $(HOME)/.shrc
 	ln -sf $(dotfiles)/bashrc $(HOME)/.bashrc
 	ln -sf $(dotfiles)/bash_aliases $(HOME)/.bash_aliases
 	ln -sf $(dotfiles)/tcshrc $(HOME)/.tcshrc
@@ -35,6 +36,7 @@ install:
 	git clone $(oh_my_fish) $(HOME)/.oh-my-fish
 	$(HOME)/.oh-my-fish/bin/install --offline --noninteractive
 	rm -rf $(HOME)/.oh-my-fish
+	ln -sf $(dotfiles)/fishrc $(HOME)/.config/fish/conf.d/omf.fish
 
 	# vim plugins
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
