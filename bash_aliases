@@ -1,5 +1,3 @@
-source sh_aliases
-
 # Google in shell
 function google () {
     tmp=`echo -n $@`
