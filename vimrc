@@ -68,6 +68,8 @@ match TAB /\t/
 set cursorcolumn
 highlight CursorColumn ctermbg=blue
 
+highlight TrailingWhitespace ctermbg=red guibg=red
+match TrailingWhitespace /\s\+$/
 
 "==============================================================================
 " Custom Settings
