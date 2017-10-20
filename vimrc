@@ -58,7 +58,7 @@ colo slate
 
 " Highlight 80 character width
 set colorcolumn=80
-hi colorcolumn ctermbg=red
+hi colorcolumn ctermbg=yellow
 
 " Highlight tabs
 highlight TAB ctermbg=blue
