@@ -56,7 +56,7 @@ set t_Co=256
 " Color Scheme
 colo slate
 
-" Highlight line break
+" Highlight 80 character width
 set colorcolumn=80
 hi colorcolumn ctermbg=red
 
