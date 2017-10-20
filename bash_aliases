@@ -36,6 +36,7 @@ if [[ -x `which thefuck` ]]; then
 fi
 
 # Weather in terminal
-function weather () {
-    curl -s wttr.in/${@:-taipei}\?m | head -n 7
+function weather ()
+{
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Taipei}?0q"
 }
