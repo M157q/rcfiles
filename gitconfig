@@ -8,11 +8,6 @@
 	filemode = false
 [alias]
 	github = "!git remote -v | python2 -c 'import sys, re; print re.search(r\"((https|git):[A-Za-z0-9\\.\\-_/]+)\\.git\", sys.stdin.readline()).group(1)'"
-[filter "lfs"]
-	required = true
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
 [commit]
 	gpgsign = true
 [gpg]
