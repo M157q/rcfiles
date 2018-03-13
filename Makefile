@@ -63,6 +63,7 @@ clean:
 	rm -f $(HOME)/.gitconfig
 	rm -f $(HOME)/.zshrc
 	rm -rf $(HOME)/.oh-my-zsh
+	rm -rf $(HOME)/.oh-my-fish
 	rm -rf $(oh_my_fish_dir)
 	rm -rf $(oh_my_fish_config)
 	rm -f $(HOME)/.vimrc
