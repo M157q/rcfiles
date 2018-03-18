@@ -9,7 +9,7 @@ hardstatus alwayslastline "%{= .R} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%
 # 將預設編碼設為 UTF-8。
 defutf8 on
 
-#解決cjk寬度問題
+# 解決 cjk 寬度問題
 #cjkwidth on
 
 # 設定 C-a b 後可看直接看到 big-5 編碼的文字，不用再切換 pietty 的字元編碼設定
