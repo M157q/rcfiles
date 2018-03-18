@@ -29,3 +29,9 @@ bind R eval "source $HOME/.screenrc" "echo '.screenrc reloaded!'"
 
 # use 256 colors
 term screen-256color
+
+# Bind focus for easily move between splited regions
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
