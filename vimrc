@@ -135,24 +135,8 @@ set tabpagemax=100
  Plugin 'matchit.zip'             " Improve % matching in Vim
  Plugin 'tpope/vim-surround'      " Made parenthesizing simple
 
- " Syntax Checker
- Plugin 'scrooloose/syntastic'
- set statusline+=%#warningmsg#
- set statusline+=%{SyntasticStatuslineFlag()}
- set statusline+=%*
- let g:syntastic_debug = 0
- let g:syntastic_auto_jump = 1
- let g:syntastic_always_populate_loc_list = 1
- let g:syntastic_auto_loc_list = 1
- let g:syntastic_check_on_open = 0
- let g:syntastic_check_on_wq = 0
- " syntastic will use this order for python checkers,
- " if one of them is not installed, it stops.
- let g:syntastic_python_checkers = ["flake8","pep8","pyflakes","pylint"]
- let g:syntastic_python_flake8_args = '--ignore=E501'
- let g:syntastic_python_pep8_args = '--ignore=E501'
- nnoremap sn :lnext<cr>
- nnoremap sp :lprevious<cr>
+ " Code Linter
+ Plugin 'w0rp/ale'
 
 
  " Scheme
