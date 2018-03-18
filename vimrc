@@ -114,10 +114,11 @@ set tabpagemax=100
  Plugin 'majutsushi/tagbar'   " Code.
  map <F8> :TagbarToggle<CR>
 
- " Writing Code
- Plugin 'Valloric/YouCompleteMe'    " Compelte Engine
- let g:ycm_key_list_select_completion = ['<Down>', '<C-N>']
- " avoid tab conflict to UltiSnips
+ " Code Completion
+ Plugin 'Shougo/deoplete.nvim'
+ Plugin 'roxma/nvim-yarp'
+ Plugin 'roxma/vim-hug-neovim-rpc'
+ let g:deoplete#enable_at_startup = 1
 
  Plugin 'scrooloose/nerdcommenter'  " Comment multi-lines. (<Leader>cc)
 
