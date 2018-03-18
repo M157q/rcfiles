@@ -39,6 +39,7 @@ install:
 	ln -sf $(dotfiles)/fishrc $(HOME)/.config/fish/conf.d/omf.fish
 
 	# vim plugins
+	pip3 install neovim # For deoplete.nvim dependency
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(dotfiles)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
