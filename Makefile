@@ -27,6 +27,8 @@ install:
 	ln -sf $(dotfiles)/tmux.conf $(HOME)/.tmux.conf
 	ln -sf $(dotfiles)/gitignore $(HOME)/.gitignore
 	ln -sf $(dotfiles)/gitconfig $(HOME)/.gitconfig
+	ln -sf $(dotfiles)/chunkwmrc $(HOME)/.chunkwmrc
+	ln -sf $(dotfiles)/skhdrc $(HOME)/.skhdrc
 
 	# oh-my-zsh
 	git clone $(oh_my_zsh) $(HOME)/.oh-my-zsh
@@ -63,6 +65,8 @@ clean:
 	rm -f $(HOME)/.gitignore
 	rm -f $(HOME)/.gitconfig
 	rm -f $(HOME)/.zshrc
+	rm -f $(HOME)/.chunkwmrc
+	rm -f $(HOME)/.skhdrc
 	rm -rf $(HOME)/.oh-my-zsh
 	rm -rf $(HOME)/.oh-my-fish
 	rm -rf $(oh_my_fish_dir)
