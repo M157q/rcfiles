@@ -137,4 +137,7 @@ git_branch () {
 # Set GPG_TTY for pinentry-curses
 export GPG_TTY=$(tty)
 
+# Load autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+
 source $HOME/.shrc
