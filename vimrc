@@ -115,7 +115,7 @@ set tabpagemax=100
  map <F8> :TagbarToggle<CR>
 
  " Code Completion
- Plugin 'Shougo/deoplete.nvim'
+ " Plugin 'Shougo/deoplete.nvim'
  Plugin 'roxma/nvim-yarp'
  Plugin 'roxma/vim-hug-neovim-rpc'
  let g:deoplete#enable_at_startup = 1
