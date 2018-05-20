@@ -146,7 +146,7 @@ set tabpagemax=100
  set laststatus=2             " Let airline appear all time.
 
  " Language
- Plugin 'wilsaj/chuck.vim'    " Plugin for ChucK
+ " Plugin 'wilsaj/chuck.vim'    " Plugin for ChucK
 
  call vundle#end()            " required!
  filetype plugin indent on    " required!
