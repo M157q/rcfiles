@@ -38,11 +38,17 @@ install:
 	rm -rf $(HOME)/.oh-my-fish
 	ln -sf $(dotfiles)/fishrc $(HOME)/.config/fish/conf.d/omf.fish
 
-	# vim plugins
+	# vim Vundle
 	pip3 install neovim # For deoplete.nvim dependency
 	git clone $(vundle) $(HOME)/.vim/bundle/Vundle.vim
 	ln -sf $(dotfiles)/vimrc $(HOME)/.vimrc
 	vim +PluginInstall +qall
+
+	# nvim Vundle
+	mkdir -p $(HOME)/.config/nvim
+	cp -r $(HOME)/.vim/bundle/Vundle.vim $(HOME)/.config/nvim/Vundle.vim
+	ln -sf $(dotfiles)/vimrc $(HOME)/.config/nvim/init.vim
+	nvim +PluginInstall +qall
 
 clean:
 	# For Linux X Window
@@ -69,6 +75,7 @@ clean:
 	rm -rf $(oh_my_fish_config)
 	rm -f $(HOME)/.vimrc
 	rm -rf $(HOME)/.vim
+	rm -rf $(HOME)/.config/nvim
 
 update: clean install
 
