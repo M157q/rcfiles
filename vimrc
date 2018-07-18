@@ -1,6 +1,15 @@
 "==============================================================================
+"
 " General Settings
 "==============================================================================
+
+if has('nvim')
+    let s:editor_root=expand("~/.config/nvim")
+    set rtp+=~/.config/nvim/bundle/Vundle.vim
+else
+    let s:editor_root=expand("~/.vim")
+    set rtp+=~/.vim/bundle/Vundle.vim
+endif
 
 " Vim5 and later versions support syntax highlighting.
 if has("syntax")
@@ -83,9 +92,9 @@ fun! StripTrailingWhitespace()
     %s/\s\+$//e
 
     "Add two spaces before each end of line for markdown
-    if &ft =~ 'markdown'
-        %s/$/  /e
-    endif
+    "if &ft =~ 'markdown'
+    "    %s/$/  /e
+    "endif
 endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
 
@@ -99,7 +108,8 @@ set tabpagemax=100
  filetype off                 " required!
 
  " Set the runtime path to include Vundle and initialize
- set rtp+=~/.vim/bundle/Vundle.vim
+ call vundle#rc(s:editor_root . '/bundle')
+
  call vundle#begin()
 
  " let Vundle manage Vundle
