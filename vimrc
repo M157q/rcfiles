@@ -147,7 +147,16 @@ set tabpagemax=100
 
  " Code Linter
  Plugin 'w0rp/ale'
+ let g:ale_linters = {
+ \   'python': ['pylint', 'flake8'],
+ \}
 
+ let g:ale_fixers = {
+ \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+ \   'python': ['autopep8', 'yapf'],
+ \}
+ let g:ale_fix_on_save = 0
+ let g:ale_completion_enabled = 1
 
  " Scheme
  Plugin 'bling/vim-airline'   " Status bar
