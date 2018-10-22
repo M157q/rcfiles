@@ -8,7 +8,7 @@ kernel = '$(shell uname -s)'
 
 install:
 	# For Linux X Window
-	if [ $(kernel) == 'Linux' ]; then \
+	@if [ $(kernel) = 'Linux' ]; then \
 		ln -sf $(dotfiles)/xinitrc $(HOME)/.xinitrc; \
 		ln -sf $(dotfiles)/Xresources $(HOME)/.Xresources; \
 		ln -sf $(dotfiles)/Xmodmap $(HOME)/.Xmodmap; \
@@ -35,10 +35,14 @@ install:
 	ln -sf $(dotfiles)/zshrc $(HOME)/.zshrc
 
 	# oh-my-fish
-	git clone $(oh_my_fish) $(HOME)/.oh-my-fish
-	$(HOME)/.oh-my-fish/bin/install --offline --noninteractive
-	rm -rf $(HOME)/.oh-my-fish
-	ln -sf $(dotfiles)/fishrc $(HOME)/.config/fish/conf.d/omf.fish
+	@if [ $(shell which fish) ]; then \
+		git clone $(oh_my_fish) $(HOME)/.oh-my-fish; \
+		$(HOME)/.oh-my-fish/bin/install --offline --noninteractive; \
+		rm -rf $(HOME)/.oh-my-fish; \
+		ln -sf $(dotfiles)/fishrc $(HOME)/.config/fish/conf.d/omf.fish; \
+	else \
+		echo "fish is not installed."; \
+	fi;
 
 	# vim Vundle
 	pip3 install neovim # For deoplete.nvim dependency
@@ -47,14 +51,18 @@ install:
 	vim +PluginInstall +qall
 
 	# nvim Vundle
-	mkdir -p $(HOME)/.config/nvim
-	cp -r $(HOME)/.vim/bundle/Vundle.vim $(HOME)/.config/nvim/Vundle.vim
+	mkdir -p $(HOME)/.config/nvim/bundle
+	cp -r $(HOME)/.vim/bundle/Vundle.vim $(HOME)/.config/nvim/bundle/Vundle.vim
 	ln -sf $(dotfiles)/vimrc $(HOME)/.config/nvim/init.vim
-	nvim +PluginInstall +qall
+	@if [ $(shell which nvim) ]; then \
+		nvim +PluginInstall +qall; \
+	else \
+		echo "nvim is not installed."; \
+	fi;
 
 clean:
 	# For Linux X Window
-	if [ $(kernel) == 'Linux' ]; then \
+	@if [ $(kernel) = 'Linux' ]; then \
 		rm -f $(HOME)/.xinitrc; \
 		rm -f $(HOME)/.Xresources; \
 		rm -f $(HOME)/.Xmodmap; \
