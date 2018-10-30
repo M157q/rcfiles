@@ -1,6 +1,6 @@
 [user]
-	email = M157q.tw@gmail.com
-	name = shunyi
+	email = "M157q.tw@gmail.com"
+	name = "Frank Jheng"
 	signingkey = 98A12CF1B4BE514E
 [core]
 	editor = vim
