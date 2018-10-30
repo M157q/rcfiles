@@ -6,6 +6,7 @@
 	editor = vim
 	excludesfile = '~/.gitignore'
 	filemode = false
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [alias]
 	github = "!git remote -v | python2 -c 'import sys, re; print re.search(r\"((https|git):[A-Za-z0-9\\.\\-_/]+)\\.git\", sys.stdin.readline()).group(1)'"
 [commit]
