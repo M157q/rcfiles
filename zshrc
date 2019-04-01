@@ -82,3 +82,4 @@ export GPG_TTY=$(tty)
 
 source $HOME/.bash_aliases
 source $HOME/.shrc
+eval "$(pyenv init -)"
