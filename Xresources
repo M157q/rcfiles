@@ -15,7 +15,7 @@ URxvt*mouseWheelScrollPage:  1
 URxvt*cursorBlink:           1
 
 ! Font
-URxvt*font:xft:WenQuanYi Zen Hei Mono:bold:size=18:antialias=true
+URxvt*font: xft:Noto Sans Mono CJK TC:bold:size=18,xft:Dejavu Sans Mono:size=18:antialias=true
 URxvt*internalBorder:   1
 
 ! Resize font on the fly
@@ -25,7 +25,7 @@ URxvt.keysym.Control-equal: perl:font-size:increase
 URxvt.keysym.Control-minus: perl:font-size:decrease
 
 ! Fix font width
-URxvt.letterSpace: -3
+URxvt.letterSpace: -6
 
 ! Extensions
 URxvt*perl-lib:        /usr/lib/urxvt/perl/
