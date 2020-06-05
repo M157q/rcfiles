@@ -80,17 +80,13 @@ cmap w!! w !sudo tee %
 
 " Auto remove trailing spaces when saving the file.
 fun! StripTrailingWhitespace()
-    %s/\s\+$//e
-
-    "Add two spaces before each end of line for markdown
-    if &ft =~ 'markdown'
-        %s/$/  /e
+    if &ft !~ 'markdown'
+        %s/\s\+$//e
     endif
 endfun
 autocmd BufWritePre * call StripTrailingWhitespace()
 
 set tabpagemax=100
-
 
 "==============================================================================
 " Vundle Settings for Plugins
