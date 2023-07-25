@@ -129,10 +129,10 @@ set tabpagemax=100
 
  Plugin 'scrooloose/nerdcommenter'  " Comment multi-lines. (<Leader>cc)
 
- " UltiSnips
- Plugin 'SirVer/ultisnips'
- Plugin 'honza/vim-snippets'
- let g:UltiSnipsEditSplit = "vertical"
+  " UltiSnips
+  " Plugin 'SirVer/ultisnips'
+  " Plugin 'honza/vim-snippets'
+  " let g:UltiSnipsEditSplit = "vertical"
 
  " Source Control Integration
  Plugin 'tpope/vim-fugitive'     " Git integration
