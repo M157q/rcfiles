@@ -85,3 +85,4 @@ export GPG_TTY=$(tty)
 
 source $HOME/.bash_aliases
 source $HOME/.shrc
+export PATH="/opt/homebrew/opt/sqlite/bin:$PATH"
