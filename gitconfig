@@ -1,7 +1,7 @@
 [user]
 	email = "gh@fkz.tw"
 	name = "Frank Zheng"
-	signingkey = EB8BAD4C010FDA137C1C1E789EB1084D09201867
+	signingkey = 1388538FBC78925D
 [core]
 	editor = vim
 	excludesfile = '~/.gitignore'
