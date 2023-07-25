@@ -89,4 +89,4 @@ update: clean install
 
 # https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/
 gen-github-ssh-key:
-	ssh-keygen -t rsa -b 4096 -C "m157q.tw@gmail.com" && eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub
+	ssh-keygen -t rsa -b 4096 -C "gh@fkz.tw" && eval `ssh-agent -s` && ssh-add ~/.ssh/id_rsa && cat ~/.ssh/id_rsa.pub

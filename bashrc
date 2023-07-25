@@ -131,9 +131,6 @@ git_branch () {
 #    cat /etc/*release | grep ^NAME= | cut -c6- | sed 's/\"//g'
 #}
 
-# added by travis gem
-[ -f /home/m157q/.travis/travis.sh ] && source /home/m157q/.travis/travis.sh
-
 # Set GPG_TTY for pinentry-curses
 export GPG_TTY=$(tty)
 

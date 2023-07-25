@@ -1,7 +1,7 @@
 [user]
-	email = "M157q.tw@gmail.com"
-	name = "Frank Jheng"
-	signingkey = 98A12CF1B4BE514E
+	email = "gh@fkz.tw"
+	name = "Frank Zheng"
+	signingkey = EB8BAD4C010FDA137C1C1E789EB1084D09201867
 [core]
 	editor = vim
 	excludesfile = '~/.gitignore'
@@ -11,7 +11,7 @@
 [commit]
 	gpgsign = true
 [gpg]
-	program = gpg
+	program = /usr/local/bin/gpg
 [color]
 	ui = true
 [color "diff-highlight"]
