@@ -48,9 +48,9 @@ COMPLETION_WAITING_DOTS="true"
 
 kernel=`uname -s`
 if [ $kernel = 'Darwin' ]; then
-    plugins=(brew screen git github gnu-utils mosh nmap npm pip python tmux docker)
+    plugins=(golang brew screen git github gnu-utils mosh nmap npm pip python tmux docker)
 elif [ $kernel = 'Linux' ]; then
-    plugins=(archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux docker)
+    plugins=(golang archlinux systemd screen git github gnu-utils mosh nmap npm pip python tmux docker)
 else
     plugins=(screen git github gnu-utils mosh nmap npm pip python tmux docker)
 fi
