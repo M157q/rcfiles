@@ -55,9 +55,6 @@ alias nmapo='sudo nmap -sS -P0 -sV -O -A'
 alias nmapp='sudo nmap -sS -P0 -p1-65535 -sV -O'
 alias nmapa='sudo nmap -A -T4'
 
-# Plurk in shell
-alias plurk='w3m http://www.plurk.com/m';
-
 # ===========
 # | exports |
 # ===========
