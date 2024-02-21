@@ -93,3 +93,6 @@ export PATH="$HOME/go/bin:$PATH";
 
 # Homebrew
 export PATH="/opt/homebrew/bin:$PATH"
+
+# Python2
+export PATH="$(pyenv root)/shims:$PATH"
