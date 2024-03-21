@@ -138,3 +138,4 @@ export GPG_TTY=$(tty)
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 source $HOME/.shrc
+. "$HOME/.cargo/env"
