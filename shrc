@@ -96,3 +96,6 @@ export PATH="/opt/homebrew/bin:$PATH"
 
 # Python2
 export PATH="$(pyenv root)/shims:$PATH"
+
+# For pkg-config to find sqlite you may need to set:
+export PKG_CONFIG_PATH="/opt/homebrew/opt/sqlite/lib/pkgconfig"
