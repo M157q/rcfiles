@@ -24,7 +24,7 @@ Just a bunch of my dotfiles.
 Make sure you have git installed and the network connection is fine.  
   
 ### Install  
-1. `git clone https://github.com/M157q/dotfiles.git`  
+1. `git clone`  
 2. `cd dotfiles`  
 3. `make install`  
   
